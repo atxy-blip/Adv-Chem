@@ -1,5 +1,11 @@
-# Adv-Chem
-Notes for advanced physical chemistry by Prof. Shuhua Li
+# Advanced Physical Chemistry
 
-Compiled with Typora 0.9.86
-Full review of the notes requires activating the support for inline equations
+Notes for advanced physical chemistry by Prof. Shuhua Li of NJU
+
+2020 Spring Semester
+
+---
+
+:notebook:  Compiled with Typora 0.9.86
+
+:warning: Full review of the notes requires activating the support for *inline equations* and *highlight text*
