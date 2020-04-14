@@ -1,8 +1,12 @@
-# Chapter 7: Approximation Methods                                   第七章：近似方法
+# Chapter 7: Approximation Methods                                                                                                                                                                                                                             第七章：近似方法
 
-## 7.1 The Variational Method Provides an Upper Bound to the Ground-State Energy of a System                                                                                                                     变分法给出了基态体系的上限
+第六章指出，任何比氢原子更复杂的原子或分子薛定谔方程均不能精确求解:anguished::broken_heart:。本章将介绍两种使用最广泛的近似求解方法：变分法和微扰法:rofl:。
 
-### The Variational Method                                                                                                                        变分法
+[toc]
+
+## 7.1 The Variational Method Provides an Upper Bound to the Ground-State Energy of a System                                                                                                                     变分法给出了基态体系的能量上限
+
+### The Variational Method                                                                                                                                                                                                                                                                                                        变分法
 
 > #### Dirac notation 狄拉克符号或狄拉克标记
 >
@@ -21,7 +25,7 @@
 > \langle \phi |\ (X|\psi \rangle )=(\langle \phi |X)\ |\psi \rangle
 > $$
 
- 线性变分原理：任一个波函数φ都可以展开为哈密顿算符的实际本征函数的*线性*组合
+线性变分原理：任一个波函数φ都可以展开为哈密顿算符的实际本征函数的*线性*组合
 
 厄密算符的精确本征值不详，但可以假设其存在
 $$
@@ -70,21 +74,22 @@ $$
 > { E _ { \varphi } - \varepsilon _ { 0 } = \frac { \sum _ { n } c _ { n } ^ { * } c _ { n } \varepsilon _ { n } } { \sum _ { n } c _ { n } ^ { * } c _ { n } } - \frac { \varepsilon _ { 0 } \sum _ { n } c _ { n } ^ { * } c _ { n } } { \sum _ { n } c _ { n } ^ { * } c _ { n } } = \frac { \sum _ { n } c _ { n } ^ { * } c _ { n } ( \varepsilon _ { n } - \varepsilon _ { 0 } ) } { \sum _ { n } c _ { n } ^ { * } c _ { n } } \geq 0 } \right.
 > $$
 
+若试探波函数依赖于若干变量$\alpha,\beta,\gamma,\cdots$
 $$
-E _ { \varphi } (\alpha,\beta,\gamma) \geq \varepsilon _ { 0 }
+E _ { \varphi } (\alpha,\beta,\gamma,\cdots) \geqslant \varepsilon _ { 0 }
 $$
 
-对E求极小值，逼近基态能量
+可根据这些变量对E求极小值，逼近基态能量
 
 > #### Example 7.1
 >
-> $e^{-\alpha r}$
+> 使用$e^{-\alpha r}$这个试探波函数计算氢原子基态能量。
 > $$
-> \hat { H } = - \frac { h ^ { 2 } } { 2 m _ { e } r ^ { 2 } } \frac { d } { d r } \left( r ^ { 2 } \frac { d } { d r } \right) - \frac { e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } r }
+> \hat { H } = - \frac { h ^ { 2 } } { 2 m _ { e } r ^ { 2 } } \frac { \mathrm{d} } { \mathrm{d} r } \left( r ^ { 2 } \frac { \mathrm{d} } { \mathrm{d} r } \right) - \frac { e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } r }
 > $$
-> 球极坐标 三个坐标积分
+> 球极坐标 三个坐标积分 $\mathrm{d} \tau = r ^ { 2 } \sin \theta \mathrm{d} r \mathrm{d} \theta \mathrm{d} \phi$
 > $$
-> E _ { 0 } = \frac { \int \psi _ { 0 } ^ { * } \hat { H } \psi _ { 0 } d \tau } { \int \psi _ { 0 } ^ { * } \psi _ { 0 } d \tau } = \frac { 4 \pi \int _ { 0 } ^ { \infty } e ^ { - \alpha r } \hat { H } e ^ { - \alpha r } r ^ { 2 } d r } { 4 \pi \int _ { 0 } ^ { \infty } e ^ { - \alpha r } e ^ { - \alpha r } r ^ { 2 } d r } = \frac { \hbar ^ { 2 } \alpha ^ { 2 } } { 2 m _ { e } } - \frac { e ^ { 2 } \alpha } { 4 \pi \varepsilon _ { 0 } }
+> E _ { 0 } = \frac { \int \psi _ { 0 } ^ { * } \hat { H } \psi _ { 0 } \mathrm{d} \tau } { \int \psi _ { 0 } ^ { * } \psi _ { 0 } \mathrm{d} \tau } = \frac { 4 \pi \int _ { 0 } ^ { \infty } e ^ { - \alpha r } \hat { H } e ^ { - \alpha r } r ^ { 2 } \mathrm{d} r } { 4 \pi \int _ { 0 } ^ { \infty } e ^ { - \alpha r } e ^ { - \alpha r } r ^ { 2 } \mathrm{d} r } = \frac { \hbar ^ { 2 } \alpha ^ { 2 } } { 2 m _ { e } } - \frac { e ^ { 2 } \alpha } { 4 \pi \varepsilon _ { 0 } }
 > $$
 >
 > $$
@@ -95,16 +100,17 @@ $$
 > E_0 = \frac{1}{2} \left(\frac{ m _ { e } e ^ { 4 } } { 16 \pi^2 \varepsilon _ { 0 }^2 \hbar ^ { 2 } }\right)
 > $$
 >
-> 关键在于选一个好的试探波函数
 
-### Application of the Variational Method to Two-electron Problems                                     将变分法用于两电子体系
+变分法的关键在于选一个好的试探波函数。
+
+### Application of the Variational Method to Two-electron Problems                                                                                                                                                                                                                     将变分法用于两电子体系
 
 氦原子哈密顿
 $$
 \left. { \hat { H } = ( - \frac { \hbar ^ { 2 } } { 2 m _ { e } } \nabla _ { 1 } ^ { 2 } - \frac { 2 e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \frac { 1 } { \vec{r} _ { 1 } } ) + ( - \frac { \hbar ^ { 2 } } { 2 m _ { e } } \nabla _ { 2 } ^ { 2 } - \frac { 2 e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \frac { 1 } { \vec{r} _ { 2 } } ) + \frac { e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \cdot \frac { 1 } { r _ { 12 } } }\\  \\{ = \hat { H } _ { H } ( 1 ) + \hat { H } _ { H } ( 2 ) + \frac { e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \cdot \frac { 1 } { r _ { 12 } } } \right.
 $$
 
-物理意义：交换指标，多一个符号 试探波函数是反对称的 电子是费米子fermion 
+选取一个反对称的试探波函数。物理意义：交换指标，多一个符号 电子是费米子fermion 
 
 空间部分Psi与自旋部分波函数相乘
 
@@ -138,7 +144,9 @@ $$
 
 实验结果$-2.9033$，化学精度1kcal/mol
 
-## 7.2 A Trial Function That Depends Linearly on the Variational Parameters Leads to a Secular Determinant
+## 7.2 A Trial Function That Depends Linearly on the Variational Parameters Leads to a Secular Determinant                                                                                                                                                                                                                                                                        与变量线性相关的试探波函数得到久期行列式
+
+### The Secular Determinant                                                                                                                                                                                                                                                                         久期行列式
 
 $$
 | \Phi \rangle = \sum_{i=1}^{N} c _ { i } | \psi _ { i } \rangle
@@ -146,7 +154,7 @@ $$
 
 $\{| \psi _ { i } \rangle\}$
 
-定义内积
+假设所有的波函数都是实数集上的，定义内积
 $$
 \langle \Phi | \Phi \rangle = \sum _ { i j } c _ { i } c _ { j } \langle \psi _ { i } | \psi _ { j } \rangle = \sum _ { i j } c _ { i } c _ { j } S _ { i j }
 $$
@@ -162,33 +170,47 @@ $$
 平均值计算公式 求E对c的导数
 
 $$
-E = \frac { \langle \Phi | \hat { H } | \Phi \rangle } { \langle \Phi | \Phi \rangle } = \frac { \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } H _ { i j } } { \sum _ { j = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j } } \\
+E = \frac { \langle \Phi | \hat { H } | \Phi \rangle } { \langle \Phi | \Phi \rangle } = \frac { \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } H _ { i j } } { \sum _ { j = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j } }
+$$
+移项：
+$$
 \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } H _ { i j } = E \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j }
 $$
-
 复合函数求导 右边第一项等于0
 $$
 \frac { \partial } { \partial c _ { k } } \left( \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } H _ { i j } \right) = \frac { \partial E } { \partial c _ { k } } \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j } + E \frac { \partial } { \partial c _ { k } } \left( \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j } \right)
 $$
 
+由于我们根据$c _ { k }$求E的极小值
+$$
+\frac { \partial E } { \partial c _ { k } } = 0 \quad k=1,2,\cdots
+$$
 
+故
 $$
 \frac { \partial } { \partial c _ { k } } ( \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } H _ { i j } ) = E \frac { \partial } { \partial c _ { k } } ( \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j } )
 $$
 
+由$\frac { \partial c _ { i } } { \partial c _ { k } } = \delta _ { i k } \quad k=1,2,\cdots$
 $$
-\frac { \partial c _ { i } } { \partial c _ { k } } = \delta _ { i k }
+\begin{aligned}
+\frac { \partial } { \partial c _ { k } } ( \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } H _ { i j } ) &= \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } \frac { \partial c _ { i } } { \partial c _ { k } } c _ { j } H _ { i j } + \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } \frac { \partial c _ { j } } { \partial c _ { k } } H _ { i j } \\
+&= \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } \delta _ { i k } c _ { j } H _ { i j } + \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } \delta _ { j k } H _ { i j } \\
+&= \sum _ { j = 1 } ^ { N } c _ { j } H _ { k j } + \sum _ { i = 1 } ^ { N } c _ { i } H _ { i k }
+\end{aligned}
 $$
 
-i和j有相同意义 实函数Hij=Hji
+i和j有相同意义 实函数$H_{ij}=H_{ji}$
 $$
 E \frac { \partial } { \partial c _ { k } } ( \sum _ { i = 1 } ^ { N } \sum _ { j = 1 } ^ { N } c _ { i } c _ { j } S _ { i j } ) = E ( \sum _ { i = 1 } ^ { N } c _ { i } S _ { i k } + \sum _ { j = 1 } ^ { N } c _ { j } S _ { k j } )
 $$
 
+于是：
 $$
 \sum _ { i = 1 } ^ { N } c _ { i } H _ { i k } + \sum _ { j = 1 } ^ { N } c _ { j } H _ { i j } = E ( \sum _ { i = 1 } ^ { N } c _ { i } S _ { i k } + \sum _ { j = 1 } ^ { N } c _ { j } S _ { k j } )
 $$
 
+于是：
 $$
 \sum _ { i = 1 } ^ { N } c _ { i } H _ { i k } = E \sum _ { i = 1 } ^ { N } c _ { i } S _ { i k }
 $$
@@ -197,7 +219,7 @@ $$
 \sum _ { i = 1 } ^ { N } ( H _ { i k } - E S _ { i k } ) c _ { i } = 0 \quad ( k = 1,2 , \cdots , N )
 $$
 
-方程组对应的系数行列式=0，解出E，N个根 最小根接近基态能量
+上述方程组要有非平庸解，则其对应的系数行列式=0，解出E，
 
 $$
 \begin{vmatrix}
@@ -207,9 +229,11 @@ $$
 { H _ { 1N } - E S _ { 1N } } & { H _ { 2N } - E S _ { 2N } } &\cdots & { H _ { NN } - E S _ { NN } }
 \end{vmatrix} = 0
 $$
-secular determinant ( 久期行列式
+该行列式称为久期行列式secular determinant。
 
-另一种表示
+N个根 最小根接近基态能量
+
+### An Alternative Expression                                                                                                                                                                                另一种表示
 
 $$
 \begin{pmatrix}
@@ -253,6 +277,7 @@ $$
 \end{pmatrix}
 $$
 
+令
 
 $$
 H = \begin{pmatrix}
@@ -285,7 +310,7 @@ H \vec{c}^i=E\vec{S}\vec{c}^i
 $$
 
 $$
-\vec{C} = \begin{pmatrix} { c ^ { 1 } } &{ c ^ { 2 } } &\cdots &{ c ^ { N } } \end{pmatrix} =
+\vec{C} = \begin{pmatrix} { \vec{c} ^ { 1 } } &{ \vec{c} ^ { 2 } } &\cdots &{ \vec{c} ^ { N } } \end{pmatrix} =
 \begin{pmatrix}
 { c _ { 11 } } & { c _ { 11 } } &\cdots & { c _ { N1 } } \\ 
 { c _ { 12 } } & { c _ { 22 } } &\cdots & { c _ { N2 } } \\
@@ -305,14 +330,16 @@ $$
 HC=SC\varepsilon
 $$
 
+线性变分法等效于解本征值方程
 $$
 C^{-1}S^{-1} HC=\varepsilon
 $$
 
-找到使$S^{-1} H$对角化的矩阵$C$
+要求得本征值，需找到使$S^{-1} H$对角化的矩阵$C$
 
 > #### Example 7.2
 >
+> 对箱中粒子模型应用线性变分法，确定其归一化波函数
 > $$
 > \phi = c _ { 1 } x ( 1 - x ) + c _ { 2 } x ^ { 2 } ( 1 - x ) ^ { 2 } \quad 0 \leq x \leq 1
 > $$
@@ -355,15 +382,15 @@ $$
 > ax.plot(x, psi)
 > 
 > ax.set(xlabel='x', ylabel=r"$\phi$",
->        title='Figure 7.3 A comparison of the optimized trial \
+>     title='Figure 7.3 A comparison of the optimized trial \
 > function with \nthe exact ground-state particle-in-a-box wave\
->  function.')
+> function.')
 > ax.grid()
 > 
 > plt.show()
 > ```
 
-## 7.3 Trial Functions Can Be Linear Combination of Functions that Also Contain Variational Parameters                                                                                         试探波函数可以是包含变量的函数的线性组合
+## 7.3 Trial Functions Can Be Linear Combination of Functions that Also Contain Variational Parameters                                                                                                                                                                                 试探波函数可以是包含变量的函数的线性组合
 $$
 \phi=\sum_{j=1}^{N}c_jf_j
 $$
@@ -373,7 +400,9 @@ $$
 \phi=\sum_{j=1}^{N}c_je^{-\alpha_jr^2}
 $$
 
-## 7.4 Perturbation Theory Expresses the Solution to One Problem in Terms of Another Problem Solved Previously                                                                                 微扰法根据一个已解决问题给出了另一个问题的解
+## 7.4 Perturbation Theory Expresses the Solution to One Problem in Terms of Another Problem Solved Previously                                                                                                                                                                         微扰法根据一个已解决问题给出了另一个问题的解
+
+### Perturbation Theory                                                                                                                                                                                                                           微扰法
 
 $$
 H | \Phi _ { i } \rangle = ( H _ { 0 } + v ) | \Phi _ { i } \rangle = E _ { i } | \Phi _ { i } \rangle
@@ -462,7 +491,8 @@ E _ { i } = E _ { i } ^ { ( 0 ) } + E _ { i } ^ { ( 1 ) } + E _ { i } ^ { ( 2 ) 
 $$
 把i那部分提到外面 波函数有常数不确定性
 
-零级波函数和一级能量
+### The zeroth-order wave function and the first-order energy                                                                                                                                                           零级波函数和一级能量
+
 $$
 \begin{aligned}
 E _ { i } ^ { ( 1 ) } &= \left \langle \psi _ { i } ^ { ( 0 ) } | \nu | \psi _ { i } ^ { ( 0 ) } \right \rangle \\
@@ -470,40 +500,106 @@ E _ { i } ^ { ( 0 ) } + E _ { i } ^ { ( 1 ) } &= \left \langle \psi _ { i } ^ { 
 &= \left \langle \psi _ { i } ^ { ( 0 ) } | H | \psi _ { i } ^ { ( 0 ) } \right \rangle
 \end{aligned}
 $$
-与变分方法的联系：$H_0$的本征函数$\psi _ { i } ^ { ( 0 ) }$作为试探波函数
+### The first-order wave function and the second-order energy                                                                                                                                                           一级波函数和二级能量
 
+$n=2$
+$$
+\left( E _ { i } ^ { ( 0 ) } - H _ { 0 } \right) | \psi _ { i } ^ { ( 1 ) } \rangle = \left( v - E _ { i } ^ { ( 1 ) } \right) | i \rangle
+$$
+左乘$\langle n |$有：
+$$
+\left\langle n \right| \left( E _ { i } ^ { ( 0 ) } - H _ { 0 } \right) \left| \psi _ { i } ^ { ( 2 ) } \right\rangle = \left\langle n \right| v - E _ { i } ^ { ( 1 ) } \left| \psi _ { i } ^ { ( 1 ) } \right\rangle - E _ { i } ^ { ( 2 ) } \langle n | i \rangle \quad ( n \neq i )
+$$
+使用本征值 $H _ { 0 } | m \rangle = E _ { m } ^ { ( 0 ) } | m \rangle$
+$$
+| \psi _ { i } ^ { ( 1 ) } \rangle = { \sum _ { m } } ^ { \prime } | m \rangle C _ { m } ^ { ( 1 ) } \quad ( m \neq i )
+$$
 
+$$
+\begin{aligned}
+\langle n | \left( E _ { i } ^ { ( 0 ) } - H _ { 0 } \right) { \sum _ { m } } ^ { \prime } C _ { m } ^ { ( 1 ) } | m \rangle
+&= { \sum _ { m } } ^ { \prime } \langle n | \left( E _ { i } ^ { ( 0 ) } - H _ { 0 } \right) | m \rangle C _ { m } ^ { ( 1 ) } \\
+&= { \sum _ { m } } ^ { \prime } ( n | ( E _ { i } ^ { ( 0 ) } - E _ { m } ^ { ( 0 ) } ) | m \rangle C _ { m } ^ { ( 1 ) } \\
+&= { \sum _ { m } } ^ { \prime } ( E _ { i } ^ { ( 0 ) } - E _ { m } ^ { ( 0 ) } ) \langle n | m \rangle C _ { m } ^ { ( 1 ) } \\
+&= ( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } ) C _ { n } ^ { ( 1 ) }
+\end{aligned}
+$$
+
+$$
+( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } ) C _ { n } ^ { ( 1 ) } = \langle n | v | i \rangle \quad C _ { n } ^ { ( 1 ) } = \frac { \langle n | v | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } }
+$$
+
+一级波函数为：
 $$
 | \psi _ { i } ^ { ( 1 ) } \rangle = {\sum _ { n }} ^ { \prime } | n \rangle \frac { \langle n | \nu | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } } \quad ( n \neq i )
 $$
 
+二级能量为：
+$$
+E _ { i } ^ { ( 2 ) } = \langle i | v | \psi _ { i } ^ { ( 1 ) } \rangle = \sum _ { n } \langle i | v | n \rangle \frac { \langle n | v | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } } = \sum _ { n } \cdot \frac { \langle i | v | n \rangle \langle n | v | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } }
+$$
+### The second-order wave function and the third-order energy                                                                                                                                                          二级波函数和三级能量
+
+$n=2$
+$$
+\left( E _ { i } ^ { ( 0 ) } - H _ { 0 } \right) | \psi _ { i } ^ { ( 2 ) } \rangle = \left( v - E _ { i } ^ { ( 1 ) } \right) | \psi _ { i } ^ { ( 1 ) } \rangle - E _ { i } ^ { ( 2 ) } | i \rangle
+$$
+
+左乘$\langle n |$有：
+$$
+\langle n | \left( E _ { i } ^ { ( 0 ) } - H _ { 0 } \right) | \psi _ { i } ^ { ( 2 ) } \rangle = \langle n | v - E _ { i } ^ { ( 1 ) } | \psi _ { i } ^ { ( 1 ) } \rangle - E _ { i } ^ { ( 2 ) } \langle n | i \rangle \quad ( n \neq i )
+$$
+$$
+\left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) \langle n | \psi _ { i } ^ { ( 2 ) } \rangle = \langle n | v | \psi _ { i } ^ { ( 1 ) } \rangle - E _ { i } ^ { ( 1 ) } \langle n | \psi _ { i } ^ { ( 1 ) } \rangle
+$$
+
+$$
+\langle n | \psi _ { i } ^ { ( 2 ) } \rangle = \frac { \langle n | v | \psi _ { i } ^ { ( 1 ) } \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) } - E _ { i } ^ { ( 1 ) } \frac { \langle n | \psi _ { i } ^ { ( 1 ) } \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) }
+$$
+二级波函数为：
+$$
+\langle n | \psi _ { i } ^ { ( 2 ) } \rangle = \frac { \langle n | v | \psi _ { i } ^ { ( 1 ) } \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) } - E _ { i } ^ { ( 1 ) } \frac { \langle n | \psi _ { i } ^ { ( 1 ) } \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) }
+$$
+三级能量为：
+$$
+\begin{aligned}
+E _ { i } ^ { ( 3 ) } &= \langle i | v | \psi _ { i } ^ { ( 2 ) } \rangle \\ 
+&= { \sum } ^ { \prime } \langle i | v | n \rangle \langle n | \psi _ { i } ^ { ( 2 ) } \rangle \\
+&= { \sum _ { n } } ^ { \prime } \frac { \langle i | v | n \rangle \langle n | v | \psi _ { i } ^ { ( 1 ) } \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) } - E _ { i } ^ { ( 1 ) } { \sum _ { n } } ^ { \prime } \frac { \langle i | v | n \rangle \langle n | \psi _ { i } ^ { ( 1 ) } \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) }
+\end{aligned}
+$$
+
+代入一级波函数后得到最终形式：
 $$
 E _ { i } ^ { ( 3 ) } = {\sum _ { n m }} ^ { \prime } \frac { \langle i | v | n \rangle \langle n | v | m \rangle \langle m | v | i \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) \left ( E _ { i } ^ { ( 0 ) } - E _ { m } ^ { ( 0 ) }  \right) } - E _ { i } ^ { ( 1 ) } {\sum _ { n }} ^ { \prime } \cdot \frac { \langle i | v | n \rangle \langle n | v | i \rangle } { \left( E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } \right) ^ { 2 } }
 $$
 
 
 
+> 与变分方法的联系：$H_0$的本征函数$\psi _ { i } ^ { ( 0 ) }$作为试探波函数
+>
+> 
+>
+> $E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } = 0$，不受扰动的能级简并，微扰法失效
+>
+> $\frac { \langle n | \nu | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } } \ll 1$时微扰法很好
+>
+> 
+>
+> 氦原子基态可，激发态不可
+>
+> 两个类氢原子1s 2s 左右交换 构造零级波函数，有简并
+>
+> 
+>
+> 外加电场 电场作为微扰
+>
+>  
+>
+> 简谐振子
+>
 
-
-$E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } = 0$，不受扰动的能级简并，微扰法失效
-
-$\frac { \langle n | \nu | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { ( 0 ) } } \ll 1$时微扰法很好
-
-
-
-氦原子基态可，激发态不可
-
-两个类氢原子1s 2s 左右交换 构造零级波函数，有简并
-
-
-
-外加电场 电场作为微扰
-
- 
-
-简谐振子
-
-### Application of Perturbation Theory to the Helium Atom
+### Application of Perturbation Theory to the Helium Atom                                                                                                                                                  将微扰法应用于氦原子
 
 39页最后一公式
 
@@ -511,7 +607,6 @@ $\frac { \langle n | \nu | i \rangle } { E _ { i } ^ { ( 0 ) } - E _ { n } ^ { (
 $$
 E _ { 0 } \approx E _ { 0 } ^ { ( 0 ) } + E _ { 0 } ^ { ( 1 ) } = - \frac { 1 } { 2 } Z ^ { 2 } - \frac { 1 } { 2 } Z ^ { 2 } + \frac { 5 } { 8 } Z = - Z ^ { 2 } + \frac { 5 } { 8 } Z = - 2.8477 \quad ( Z = 2 )
 $$
-
 
 
 > #### Example 7.3
@@ -528,47 +623,41 @@ $$
 >
 > 
 
-
+---
 
 ## Mathchapter F: Matrices
 
 ### 1 Matrix
 
 #### 1) The addition or subtraction rule
-
 $$
 C = A \pm B
 $$
-
 #### 2) The matrix multiplication rule
 
 ### 2 Some important definitions and properties of square matrices
 
-#### 1) Diagonal matrix
+#### 1) Diagonal matrix 对角矩阵
 
-#### 2) The trace of the matrix A                                                                                                                                     迹
+#### 2) The trace of the matrix A 迹
 
-#### 3) The unit matrix                                                                                                                                                                                                               单位矩阵
-
+#### 3) The unit matrix 单位矩阵
 
 $$
 IA = AI = A
 $$
 
 
+#### 4) The inverse of the matrix A, denoted by A^-1^ 逆矩阵
 
-#### 4) The inverse of the matrix A, denoted by $A ^{-1}$                                                                                                        逆矩阵
+#### 5) Unitary matrix 酉矩阵
 
-#### 5) Unitary matrix                                                                                                                                                                                                               酉矩阵
-
-#### 6) A Hermitian matrix is self-adjoint                                                                                                         厄密矩阵自共轭
+#### 6) A Hermitian matrix is self-adjoint 厄密矩阵自共轭
 
 ## Mathchapter G: Matrix Eigenvalue Problems
-
 $$
 Hc=ESc
 $$
-
 > #### Example G1
 >
 > $$
@@ -576,7 +665,6 @@ $$
 > $$
 >
 > 
-
 
 $$
 D = \begin{pmatrix} 
@@ -586,7 +674,6 @@ D = \begin{pmatrix}
 \lambda \\
 \end{pmatrix}
 $$
-
 
 相似变换
 $$
