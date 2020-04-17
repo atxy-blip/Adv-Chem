@@ -6,7 +6,7 @@
 
 ## 7.1 The Variational Method Provides an Upper Bound to the Ground-State Energy of a System                                                                                                                     变分法给出了基态体系的能量上限
 
-### The Variational Method                                                                                                                                                                                                                                                                                                        变分法
+### The Variational Method 变分法
 
 > #### Dirac notation 狄拉克符号或狄拉克标记
 >
@@ -92,6 +92,12 @@ $$
 > E _ { 0 } = \frac { \int \psi _ { 0 } ^ { * } \hat { H } \psi _ { 0 } \mathrm{d} \tau } { \int \psi _ { 0 } ^ { * } \psi _ { 0 } \mathrm{d} \tau } = \frac { 4 \pi \int _ { 0 } ^ { \infty } e ^ { - \alpha r } \hat { H } e ^ { - \alpha r } r ^ { 2 } \mathrm{d} r } { 4 \pi \int _ { 0 } ^ { \infty } e ^ { - \alpha r } e ^ { - \alpha r } r ^ { 2 } \mathrm{d} r } = \frac { \hbar ^ { 2 } \alpha ^ { 2 } } { 2 m _ { e } } - \frac { e ^ { 2 } \alpha } { 4 \pi \varepsilon _ { 0 } }
 > $$
 >
+> > ##### 高斯积分:
+> >
+> > $$
+> > \int_{0}^{\infty}x^ne^{-\alpha{x}^2}\mathrm{d}x=\frac{\Gamma\left(\frac{n+1}{2}\right)}{2\alpha^{\frac{n+1}{2}}}
+> > $$
+>
 > $$
 > \frac { \mathrm{d} E _ { 0 } } { \mathrm{d} \alpha } = 0 \quad \Rightarrow \quad \alpha = \frac { m _ { e } e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } \hbar ^ { 2 } }
 > $$
@@ -146,7 +152,7 @@ $$
 
 ## 7.2 A Trial Function That Depends Linearly on the Variational Parameters Leads to a Secular Determinant                                                                                                                                                                                                                                                                        与变量线性相关的试探波函数得到久期行列式
 
-### The Secular Determinant                                                                                                                                                                                                                                                                         久期行列式
+### The Secular Determinant 久期行列式
 
 $$
 | \Phi \rangle = \sum_{i=1}^{N} c _ { i } | \psi _ { i } \rangle
@@ -233,7 +239,7 @@ $$
 
 N个根 最小根接近基态能量
 
-### An Alternative Expression                                                                                                                                                                                另一种表示
+### An Alternative Expression 另一种表示
 
 $$
 \begin{pmatrix}
@@ -402,7 +408,7 @@ $$
 
 ## 7.4 Perturbation Theory Expresses the Solution to One Problem in Terms of Another Problem Solved Previously                                                                                                                                                                         微扰法根据一个已解决问题给出了另一个问题的解
 
-### Perturbation Theory                                                                                                                                                                                                                           微扰法
+### Perturbation Theory 微扰法
 
 $$
 H | \Phi _ { i } \rangle = ( H _ { 0 } + v ) | \Phi _ { i } \rangle = E _ { i } | \Phi _ { i } \rangle
@@ -599,7 +605,7 @@ $$
 > 简谐振子
 >
 
-### Application of Perturbation Theory to the Helium Atom                                                                                                                                                  将微扰法应用于氦原子
+### Application of Perturbation Theory to the Helium Atom 将微扰法应用于氦原子
 
 39页最后一公式
 
