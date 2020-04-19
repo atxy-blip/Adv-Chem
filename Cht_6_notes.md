@@ -1,4 +1,4 @@
-# Chapter 6: the Hydrogen Atom                                          氢原子模型
+# Chapter 6: the Hydrogen Atom                                          第六章：氢原子模型
 
 ## 6.1 The Schrödinger Equation for the Hydrogen Atom                                                 氢原子薛定谔方程
 
@@ -721,6 +721,17 @@ plot = ax.plot_surface(X, Y, Z,
 
 plt.show()
 ```
+
+>### MATLAB
+>
+>```matlab
+>theta = linspace(-pi/2,pi/2);
+>phi = linspace(0,2*pi);
+>[phi2,theta2] = meshgrid(phi,theta);
+>dxy = 0.25*sqrt(15/pi)*sin(theta2+pi/2).^2.*sin(2*phi2);
+>[x,y,z] = sph2cart(phi2,theta2,dxy);
+>surf(x,y,z)
+>```
 
 
 
