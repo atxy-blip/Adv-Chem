@@ -8,7 +8,7 @@
 
 原子单位Atomic units：
 
-- Mass: the mass of an electron ($m_e$ )
+- Mass: the mass of an electron ($m_e$)
 - Charge: the charge on a proton (e)
 - Angular momentum: $\hbar$
 - Length (Bohr radius):$a_0$
@@ -65,9 +65,9 @@ $$
 ### Variational Method 变分法
 
 $$
-\Psi _ { 0 } = \psi _ { 1 s } ( \vec { r } _ { 1 } ) \psi _ { 1 s } ( \vec { r } _ { 2 } ) \frac { 1 } { \sqrt { 2 } } [ \alpha ( 1 ) \beta ( 2 ) - \beta ( 1 ) \alpha ( 2 ) ] \\
-\psi _ { 1 s } ( \vec { r } _ { i } ) = ( \frac { Z ^ { 3 } } { \pi } ) ^ { \frac { 1 } { 2 } } e ^ { - Z r _ { i } } \\
-E = - ( \frac { 27 } { 16 } ) ^ { 2 } E _ { h } = - 2.8477 E _ { h }
+\Psi _ { 0 } = \psi _ { 1 s } \left ( \vec { r } _ { 1 } \right ) \psi _ { 1 s } \left ( \vec { r } _ { 2 } \right ) \frac { 1 } { \sqrt { 2 } } \left [ \alpha \left ( 1 \right ) \beta \left ( 2 \right ) - \beta \left ( 1 \right ) \alpha \left ( 2 \right ) \right ] \\
+\psi _ { 1 s } \left ( \vec { r } _ { i } \right ) = \left ( \frac { Z ^ { 3 } } { \pi } \right ) ^ { \frac { 1 } { 2 } } e ^ { - Z r _ { i } } \\
+E = - \left ( \frac { 27 } { 16 } \right ) ^ { 2 } E _ { h } = - 2.8477 E _ { h }
 $$
 
 电离能
@@ -112,11 +112,13 @@ $$
 ### The Eigenvalues of $\hat { S } ^ { 2 }$ And $\hat { S } _ { z }$ (in Atomic Units) 原子单位制的本征值
 
 $$
-\hat { S } ^ { 2 } Y = s ( s + 1 ) Y \quad s = 0 , \frac { 1 } { 2 } , 1, \frac { 3 } { 2 } , \cdots \\
+\hat { S } ^ { 2 } Y = s \left ( s + 1 \right ) Y \quad s = 0 , \frac { 1 } { 2 } , 1, \frac { 3 } { 2 } , \cdots \\
 \hat { S } _ { z } Y = m _ { s } Y \quad m _ { s } = - s , - s + 1 , \cdots , s - 1 , s
 $$
 
 s称为粒子的自旋
+
+两电子耦合 矢量长度固定，总自旋S取值0或1
 $$
 \hat { S } _ { + } = \hat { S } _ { x } + i \hat { S } _ { y } \quad \hat { S } _ { - } = \hat { S } _ { x } - i \hat { S } _ { y }
 $$
@@ -128,8 +130,8 @@ $$
 
 第一个是s，第二个是ms Sz本征值
 $$
-\int \alpha ^ { * } ( \sigma ) \alpha ( \sigma ) d \sigma = \int \beta ^ { * } ( \sigma ) \beta ( \sigma ) d \sigma = 1 \\
-\int \alpha ^ { * } ( \sigma ) \beta ( \sigma ) d \sigma = \int \beta ^ { * } ( \sigma ) \alpha ( \sigma ) d \sigma = 0
+\int \alpha ^ { * } \left ( \sigma \right ) \alpha \left ( \sigma \right ) d \sigma = \int \beta ^ { * } \left ( \sigma \right ) \beta \left ( \sigma \right ) d \sigma = 1 \\
+\int \alpha ^ { * } \left ( \sigma \right ) \beta \left ( \sigma \right ) d \sigma = \int \beta ^ { * } \left ( \sigma \right ) \alpha \left ( \sigma \right ) d \sigma = 0
 $$
 
 
@@ -139,8 +141,8 @@ $$
 
 在原子单位中使用如下关系
 $$
-\hat { S } _ { + } | s , m _ { s } \rangle = \sqrt { ( s - m _ { s } ) ( s + m _ { s } + 1 ) } | s , m _ { s } + 1 \rangle \\ 
-\hat { S } _ { - } | s , m _ { s } \rangle = \sqrt { ( s + m _ { s } ) ( s - m _ { s } + 1 ) } | s , m _ { s } - 1 \rangle
+\hat { S } _ { + } | s , m _ { s } \rangle = \sqrt { \left ( s - m _ { s } \right ) \left ( s + m _ { s } + 1 \right ) } | s , m _ { s } + 1 \rangle \\ 
+\hat { S } _ { - } | s , m _ { s } \rangle = \sqrt { \left ( s + m _ { s } \right ) \left ( s - m _ { s } + 1 \right ) } | s , m _ { s } - 1 \rangle
 $$
 
 有：
@@ -182,7 +184,7 @@ $$
 $$
 
 $$
-\hat { M } ^ { 2 } = ( \hat { M } _ { 1 } + \hat { M } _ { 2 } ) \cdot ( \hat { M } _ { 1 } + \hat { M } _ { 2 } ) 
+\hat { M } ^ { 2 } = \left ( \hat { M } _ { 1 } + \hat { M } _ { 2 } \right ) \cdot \left ( \hat { M } _ { 1 } + \hat { M } _ { 2 } \right ) 
 = \hat { M } _ { 1 } ^ { 2 } + \hat { M } _ { 2 } ^ { 2 } + \hat { M } _ { 1 } \cdot \hat { M } _ { 2 } + \hat { M } _ { 2 } \cdot \hat { M } _ { 1 }
 $$
 
@@ -190,7 +192,7 @@ $$
 $$
 \begin{aligned}
 \hat { M } ^ { 2 } &= \hat { M } _ { 1 } ^ { 2 } + \hat { M } _ { 2 } ^ { 2 } + 2 \hat { M } _ { 1 } \cdot \hat { M } _ { 2 } \\
- &= \hat { M } _ { 1 } ^ { 2 } + \hat { M } _ { 2 } ^ { 2 } + 2 ( \hat { M } _ { 1 x } \hat { M } _ { 2 x } + \hat { M } _ { 1 y } \hat { M } _ { 2 y } + \hat { M } _ { 1 z } \hat { M } _ { 2 z } ) \\
+ &= \hat { M } _ { 1 } ^ { 2 } + \hat { M } _ { 2 } ^ { 2 } + 2 \left ( \hat { M } _ { 1 x } \hat { M } _ { 2 x } + \hat { M } _ { 1 y } \hat { M } _ { 2 y } + \hat { M } _ { 1 z } \hat { M } _ { 2 z } \right ) \\
 & = \hat { M } _ { 1 } ^ { 2 } + \hat { M } _ { 2 } ^ { 2 } + 2 \hat { M } _ { 1 } \hat { M } _ { 2 z } + \hat { M } _ { 1 } \hat { M } _ { 2 } + \hat { M } _ { 1 } \hat { M } _ { 2 + }
 \end{aligned}
 $$
@@ -203,7 +205,7 @@ $$
 \left [ \hat{M}_y, \hat{M}_z \right ] = i \hbar \hat{M}_x;\quad
 \left [ \hat{M}_z, \hat{M}_x \right ] = i \hbar \hat{M}_y;\quad
 \left [ \hat{M}_x, \hat{M}_y \right ] = i \hbar \hat{M}_z \\ 
-\left [ \hat{M}^2, \hat{M}_x \right ]=\left [ \hat{M}^2, \hat{M}_y \right ]=\left [ \hat{M}^2, \hat{M}_z \right ]=0
+\left [ \hat{M}^2, \hat{M}_x \right ]=\left [ \hat{M}^2, \hat{M}_y \right]= \left [ \hat{M}^2, \hat{M}_z \right ]=0
 $$
 
 > #### Proof
@@ -212,9 +214,9 @@ $$
 > \begin{aligned}
 > \left [ \hat { M } _ { x } , \hat { M } _ { y } \right ] &= \left [ \hat { M } _ { 1 x } + \hat { M } _ { 2 x } , \hat { M } _ { 1 y } + \hat { M } _ { 2 y } \right ] \\
 > & = \lfloor \hat { M } _ { 1 x } , \hat { M } _ { 1 y } + \hat { M } _ { 2 y } \rfloor + \lfloor \hat { M } _ { 2 x } , \hat { M } _ { 1 y } + \hat { M } _ { 2 y } \rfloor \\
-> & = [ \hat { M } _ { 1 x } , \hat { M } _ { 1 y } ] + [ \hat { M } _ { 1 x } , \hat { M } _ { 2 y } ] + [ \hat { M } _ { 2 x } , \hat { M } _ { 1 y } ] + [ \hat { M } _ { 2 x } , \hat { M } _ { 2 y } ] \\
+> & = \left [ \hat { M } _ { 1 x } , \hat { M } _ { 1 y } \right ] + \left [ \hat { M } _ { 1 x } , \hat { M } _ { 2 y } \right ] + \left [ \hat { M } _ { 2 x } , \hat { M } _ { 1 y } \right ] + \left [ \hat { M } _ { 2 x } , \hat { M } _ { 2 y } \right ] \\
 > & = i \hbar \hat { M } _ { 1 z } + i \hbar \hat { M } _ { 2 z } \\
-> & = i \hbar ( \hat { M } _ { 1 z } + \hat { M } _ { 2 z } ) \\ 
+> & = i \hbar \left ( \hat { M } _ { 1 z } + \hat { M } _ { 2 z } \right ) \\ 
 > &= i \hbar \hat { M }
 > \end{aligned}
 > $$
@@ -224,13 +226,13 @@ $$
 
 此外还有
 $$
- [ \hat { M } _ { 1 } ^ { 2 } , \hat { M } _ { z } ] = 0 \quad [ \hat { M } _ { 2 } ^ { 2 } , \hat { M } _ { z } ] = 0 \quad [ \hat { M } _ { 1 } ^ { 2 } , \hat { M } ^ { 2 } ] = 0 \\ [ \hat { M } _ { 2 } ^ { 2 } , \hat { M } ^ { 2 } ] = 0 \quad \hat { M } _ { 1 } ^ { 2 } , \hat { M } _ { 2 } ^ { 2 } = 0 
+ \left [ \hat { M } _ { 1 } ^ { 2 } , \hat { M } _ { z } \right ] = 0 \quad \left [ \hat { M } _ { 2 } ^ { 2 } , \hat { M } _ { z } \right ] = 0 \quad \left [ \hat { M } _ { 1 } ^ { 2 } , \hat { M } ^ { 2 } \right ] = 0 \\ \left [ \hat { M } _ { 2 } ^ { 2 } , \hat { M } ^ { 2 } \right ] = 0 \quad \hat { M } _ { 1 } ^ { 2 } , \hat { M } _ { 2 } ^ { 2 } = 0 
 $$
 四个算符有共同本征函数，写作$| j _ { 1 } j _ { 2 } J M _ { J } \rangle$，根据对易关系式推出本征值
 $$
-\hat { M } _ { 1 } ^ { 2 } | j _ { 1 } j _ { 2 } J M _ { j } \rangle = j _ { 1 } ( j _ { 1 } + 1 ) | j _ { 1 } j _ { 2 } J M _ { J } \rangle \\
-\hat { M } _ { 2 } ^ { 2 } | j _ { 1 } j _ { 2 } J M _ { J } \rangle = j _ { 2 } ( j _ { 2 } + 1 ) | j _ { 1 } j _ { 2 } J M _ { J } \rangle \\
-\hat { M } ^ { 2 } | j _ { 1 } j _ { 2 } J M _ { J } \rangle = J ( J + 1 ) | j _ { 1 } j _ { 2 } J M _ { J } \rangle \quad J = 0 , \frac { 1 } { 2 } , 1, \cdots \\
+\hat { M } _ { 1 } ^ { 2 } | j _ { 1 } j _ { 2 } J M _ { j } \rangle = j _ { 1 } \left ( j _ { 1 } + 1 \right ) | j _ { 1 } j _ { 2 } J M _ { J } \rangle \\
+\hat { M } _ { 2 } ^ { 2 } | j _ { 1 } j _ { 2 } J M _ { J } \rangle = j _ { 2 } \left ( j _ { 2 } + 1 \right ) | j _ { 1 } j _ { 2 } J M _ { J } \rangle \\
+\hat { M } ^ { 2 } | j _ { 1 } j _ { 2 } J M _ { J } \rangle = J \left ( J + 1 \right ) | j _ { 1 } j _ { 2 } J M _ { J } \rangle \quad J = 0 , \frac { 1 } { 2 } , 1, \cdots \\
 \hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { J } \rangle = M _ { J } | j _ { 1 } j _ { 2 } J M _ { J } \rangle \quad M _ { J } = - J , - J + 1 , \cdots , J
 $$
 
@@ -239,11 +241,11 @@ $$
 
 $$
 \begin{aligned}
-\hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { J } \rangle &= M _ { J } \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
-&= \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } ) M _ { J } | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
-\hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { j } \rangle &= \hat { M } _ { z } \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
-&= ( \hat { M } _ { 1 z } + \hat { M } _ { 2 z } ) \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
-&= \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) ( m _ { 1 } + m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle
+\hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { J } \rangle &= M _ { J } \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
+&= \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } \right ) M _ { J } | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
+\hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { j } \rangle &= \hat { M } _ { z } \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
+&= \left ( \hat { M } _ { 1 z } + \hat { M } _ { 2 z } \right ) \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
+&= \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) \left ( m _ { 1 } + m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle
 \end{aligned}
 $$
 $M_J=m_1+m_2$
@@ -254,31 +256,37 @@ $| j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle$
 
 本征函数为$| j _ { 1 } j _ { 2 } J M _ { J } \rangle$
 $$
-| j _ { 1 } j _ { 2 } J M _ { J } \rangle = \sum _ { m _ { 1 } , m _ { 2 } , m _ { 1 } + m _ { 2 } = M _ { 1 } } c ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle
+| j _ { 1 } j _ { 2 } J M _ { J } \rangle = \sum _ { m _ { 1 } , m _ { 2 } ,\\ m _ { 1 } + m _ { 2 } = M _ { 1 } } c \left ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle
 $$
 线性组合多个状态，得到想要的本征值函数
 
-$( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } )$ Clebsch-Gordan(CG)系数
+$\left ( j _ { 1 } j _ { 2 } J M _ { J } ; m _ { 1 } m _ { 2 } \right )$ Clebsch-Gordan (CG)系数
 
 展开表达式
 $$
 \begin{aligned}
 \hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { j } \rangle 
-&= M _ { j } \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\ &= \sum c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) M _ { J } | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle 
+&= M _ { j } \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\ &= \sum c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) M _ { J } | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle 
 \end{aligned}
 $$
 
 $$
 \begin{aligned} 
-\hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { j } \rangle &= \hat { M } _ { z } \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\ 
-&= ( \hat { M } _ { 1 z } + \hat { M } _ { 2 } ) \sum _ { m _ { 1 } m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
-&= \sum _ { m _ { 1 } , m _ { 2 } } c ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } ) ( m _ { 1 } + m _ { 2 } ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle
+\hat { M } _ { z } | j _ { 1 } j _ { 2 } J M _ { j } \rangle &= \hat { M } _ { z } \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\ 
+&= \left ( \hat { M } _ { 1 z } + \hat { M } _ { 2 } \right ) \sum _ { m _ { 1 } m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle \\
+&= \sum _ { m _ { 1 } , m _ { 2 } } c \left ( j _ { 1 } j _ { 2 } J M _ { j } ; m _ { 1 } m _ { 2 } \right ) \left ( m _ { 1 } + m _ { 2 } \right ) | j _ { 1 } m _ { 1 } \rangle | j _ { 2 } m _ { 2 } \rangle
 \end{aligned}
 $$
 
 $M _ { J } = m _ { 1 } + m _ { 2 }$
 
+两粒子体系的角动量
+
 $J=j_1+j_2,j_1+j_2-1,\cdots,|j_1-j_2|$
+
+角动量耦合 z分量-J到J
+
+两电子体系总自旋取值
 
 > #### Proof
 >
@@ -296,53 +304,333 @@ $J=j_1+j_2,j_1+j_2-1,\cdots,|j_1-j_2|$
 >
 > ##### 3
 >
-> 确立最小值 总状态数$(2j_1+1)(2j_2+1)$
+> 确立最小值 总状态数$\left (2j_1+1\right )\left (2j_2+1\right )$
 > $$
-> ( 2 j _ { 1 } + 1 ) ( 2 j _ { 2 } + 1 ) = \sum _ { J = J _ { \min } } ^ { J _ { \max } } ( 2 J + 1 ) = ( J _ { \max } + 1 ) ^ { 2 } - J _ { \min } ^ { 2 }
-> $$
->
-> $$
-> J _ { \min } ^ { 2 } = (j_1-j_2)^ { 2 } \quad \Rightarrow \quad J _ { \min } = |j_1-j_2|
+> \left ( 2 j _ { 1 } + 1 \right ) \left ( 2 j _ { 2 } + 1 \right ) = \sum _ { J = J _ { \min } } ^ { J _ { \max } } \left ( 2 J + 1 \right ) = \left ( J _ { \max } + 1 \right ) ^ { 2 } - J _ { \min } ^ { 2 }
 > $$
 >
-> 
+> $$
+> J _ { \min } ^ { 2 } = \left (j_1-j_2\right )^ { 2 } \quad \Rightarrow \quad J _ { \min } = |j_1-j_2|
+> $$
+>
 
-### 4 How to construct the eigenfunctions 如何构建本征函数
+> #### Example 8.1
+>
+> 3个电子 j1=1 j2=2 j3=3
+>
+> j1+j2 3 2 1
+>
+> +j3 6 5 4 3 2 1 0 5 4 3 2 1 4 3 2
+
+### 4 How to construct the eigenfunctions $| j _ { 1 } j _ { 2 } J M _ { J } \rangle$ 如何构建本征函数
+
+$| j _ { 1 } j _ { 2 } J M _ { J } \rangle$可被简化为$| J M _ { J } \rangle$，可进行如下分组
+$$
+\begin{aligned}
+&j_1+j_2 & j_1+j_2-1 \\
+&| j _ { 1 } +j _ { 2 }, j _ { 1 } +j _ { 2 }\rangle
+\end{aligned}
+$$
 
 $$
-( 2 j _ { 1 } + 1 ) ( 2 j _ { 2 } + 1 ) = \sum _ { J = J _ { \min } } ^ { J _ { \max } } ( 2 J + 1 ) = ( J _ { \max } + 1 ) ^ { 2 } - J _ { \min } ^ { 2 }
+\left ( 2 j _ { 1 } + 1 \right ) \left ( 2 j _ { 2 } + 1 \right ) = \sum _ { J = J _ { \min } } ^ { J _ { \max } } \left ( 2 J + 1 \right ) = \left ( J _ { \max } + 1 \right ) ^ { 2 } - J _ { \min } ^ { 2 }
 $$
 
 #### The Top State in the First Column
 
+易证$| j _ { 1 } +j _ { 2 }, j _ { 1 } +j _ { 2 }\rangle=| j _ { 1 } j _ { 1 } \rangle| j _ { 2 }j _ { 2 }\rangle$
 
+类比$\hat { S } _ { - } | s , m _ { s } \rangle = \sqrt { \left ( s + m _ { s } \right ) \left ( s - m _ { s } + 1 \right ) } | s , m _ { s } - 1 \rangle$可得：
+$$
+\hat { M } _ { - } | j _ { 1 } + j _ { 2 } ,\ j _ { 1 } + j _ { 2 } \rangle = \sqrt { 2 ( j _ { 1 } + j _ { 2 } ) } | j _ { 1 } + j _ { 2 } ,\ j _ { 1 } + j _ { 2 } - 1 \rangle
+$$
+其中$\hat{M}_{-}=\left(\hat{M}_{1-}+\hat{M}_{2-}\right)$，移项得
+$$
+\begin{aligned}
+\left|j_{1}+j_{2}, j_{1}+j_{2}-1\right\rangle &=\frac{1}{\sqrt{2\left(j_{1}+j_{2}\right)}} \hat{M}_{-}\left|j_{1}+j_{2}, j_{1}+j_{2}\right\rangle \\
+&=\frac{1}{\sqrt{2\left(j_{1}+j_{2}\right)}}\left(\hat{M}_{1-}+\hat{M}_{2-}\right)\left|j_{1} j_{1}\right\rangle\left|j_{2} j_{2}\right\rangle \\
+&=\sqrt{\frac{j_{1}}{j_{1}+j_{2}}}\left|j_{1}\left(j_{1}-1\right)\right\rangle\left|j_{2} j_{2}\right\rangle+\sqrt{\frac{j_{2}}{j_{1}+j_{2}}}\left|j_{1} j_{1}\right\rangle\left|j_{2}\left(j_{2}-1\right)\right\rangle
+\end{aligned}
+$$
 
 #### The Top State in the Second Column
 
 $$
-| j _ { 1 } + j _ { 2 } - 1 , j _ { 1 } + j _ { 2 } - 1 \rangle = \sqrt { \frac { j _ { 1 } } { j _ { 1 } + j _ { 2 } } } | j _ { 1 } j _ { 1 } \rangle | j _ { 2 } ( j _ { 2 } - 1 ) \rangle - \sqrt { \frac { j _ { 2 } } { j _ { 1 } + j _ { 2 } } } | j _ { 1 } ( j _ { 1 } - 1 ) \rangle | j _ { 2 } j _ { 2 } \rangle
+\left|j_{1}+j_{2}-1, j_{1}+j_{2}-1\right\rangle
 $$
 
-### 5 Eigenvalues and eigenfunctions of two–electron spin functions
+$\left|j_{1} j_{1}\right\rangle\left|j_{2}\left(j_{2}-1\right)\right\rangle,\ \left|j_{1}\left(j_{1}-1\right)\right\rangle\left|j_{2} j_{2}\right\rangle$
+
+两个态正交 区别在于第一列是+，第二列是-
+$$
+\left|j_{1}+j_{2}-1, j_{1}+j_{2}-1\right\rangle = \sqrt { \frac { j _ { 1 } } { j _ { 1 } + j _ { 2 } } } | j _ { 1 } j _ { 1 } \rangle | j _ { 2 } \left ( j _ { 2 } - 1 \right ) \rangle - \sqrt { \frac { j _ { 2 } } { j _ { 1 } + j _ { 2 } } } | j _ { 1 } \left ( j _ { 1 } - 1 \right ) \rangle | j _ { 2 } j _ { 2 } \rangle
+$$
+
+### 5 Eigenvalues and eigenfunctions of two–electron spin functions                                                                                                                                        两电子自旋体系的本征值和本征函数
+
+$\hat { S } _ { 1 } , \hat { S } _ { 2 } , \hat { S } ^ { 2 } , \hat { S } _ { z }$
+
+$| s _ { 1 } s _ { 2 } S M _ { s } \rangle$可被简化为$| S M _ { s } \rangle$
+$$
+\begin{aligned}
+ &S& M _ { s }  && | S M _ { s } \rangle jhb\\
+ &S=1(\text{Triplet}) &jhbj& &jgbbh
+
+\end{aligned}
+$$
+
+$$
+| S M _ { s } \rangle = C _ { 1 } \alpha ( 1 ) \alpha ( 2 ) + C _ { 2 } \alpha ( 1 ) \beta ( 2 ) + C _ { 3 } \beta ( 1 ) \alpha ( 2 ) + C _ { 4 } \beta ( 1 ) \beta ( 2 )
+$$
+
+$$
+\begin{align}
+    u  &= \arctan x             &  dv &= 1 \, dx  \\ 
+    du &= \frac{1}{1 + x^2}dx  &  v  &= x.
+\end{align}
+$$
 
 
 
 > #### Example 8.2
+>
+> 证明$| 11 \rangle = \alpha ( 1 ) \alpha ( 2 )$。
+> $$
+> \hat { S } ^ { 2 } = \hat { S } _ { 1 } ^ { 2 } + \hat { S } _ { 2 } ^ { 2 } + 2 \hat { S } _ { 1 z } \hat { S } _ { 2 z } + ( \hat { S } _ { 1 + } \hat { S } _ { 2 - } + \hat { S } _ { 1 - } \hat { S } _ { 2 + } )
+> $$
+> 
+> $$
+> \begin{aligned}
+> \hat{S}^{2} \alpha(1) \alpha(2) &=\left[\hat{S}_{1}^{2}+\hat{S}_{2}^{2}+2 \hat{S}_{12} \hat{S}_{2 z}+\left(\hat{S}_{1} \hat{S}_{2-}+\hat{S}_{1} \hat{S}_{2+}\right)\right] \alpha(1) \alpha(2) \\
+> &=\left[\frac{3}{4}+\frac{3}{4}+2 \times \frac{1}{4}+0\right] \alpha(1) \alpha(2) \\
+> &=2 \alpha(1) \alpha(2)=s(s+1) \alpha(1) \alpha(2)
+> \end{aligned}
+> $$
+> s=1
+> $$
+> { \hat { S } _ { z } \alpha ( 1 ) \alpha ( 2 ) = ( \hat { S } _ { 1 z } + \hat { S } _ { 2 z } ) \alpha ( 1 ) \alpha ( 2 ) }{ = ( \frac { 1 } { 2 } + \frac { 1 } { 2 } ) \alpha ( 1 ) \alpha ( 2 ) = \alpha ( 1 ) \alpha ( 2 ) = M _ { s } \alpha ( 1 ) \alpha ( 2 ) }
+> $$
+>
+> $$
+> | 11 \rangle = \alpha ( 1 ) \alpha ( 2 )
+> $$
+>
+> 
 
 
 
 ## 8.5 Wave Functions Must Be Antisymmetric in the Interchange of Any Two Electrons                                                                                                                                                                                         在任意两个电子的交换中波函数必须是反对称的
 
+自旋轨道是表示电子空间分布和自旋的波函数
+
+#### Postulate 6
+
+All electronic wave functions must be antisymmetric under the interchange of any two electrons.
+
 $$
-\left. { \psi ( 1,2 ) = 1 s ( 1 ) \alpha ( 1 ) 1 s ( 2 ) \beta ( 2 ) \equiv 1 s \alpha ( 1 ) 1 s \beta ( 2 ) } \\ 
-{ \psi ( 2,1 ) = 1 s \alpha ( 2 ) 1 s \beta ( 1 ) } \right.
+\left. { \Psi _ { 1 } \left ( 1,2 \right ) = \psi \left ( 1,2 \right ) + \psi \left ( 2,1 \right ) = 1 s \alpha \left ( 1 \right ) 1 s \beta \left ( 2 \right ) + 1 s \alpha \left ( 2 \right ) 1 s \beta \left ( 1 \right ) } \\ 
+{ \Psi _ { 2 } \left ( 1,2 \right ) = \psi \left ( 1,2 \right ) - \psi \left ( 2,1 \right ) = 1 s \alpha \left ( 1 \right ) 1 s \beta \left ( 2 \right ) - 1 s \alpha \left ( 2 \right ) 1 s \beta \left ( 1 \right ) } \right.
 $$
 
+上面一个相加的形式不满足反对称的要求
+$$
+\left. { \psi \left ( 1,2 \right ) = 1 s \left ( 1 \right ) \alpha \left ( 1 \right ) 1 s \left ( 2 \right ) \beta \left ( 2 \right ) \equiv 1 s \alpha \left ( 1 \right ) 1 s \beta \left ( 2 \right ) } \\ 
+{ \psi \left ( 2,1 \right ) = 1 s \alpha \left ( 2 \right ) 1 s \beta \left ( 1 \right ) } \right.
+$$
 
+描述氦原子
+$$
+\Psi _ { 2 } \left ( 2,1 \right ) = - \Psi _ { 2 } \left ( 1,2 \right )
+$$
+
+锂原子1s2 2s1 就1s两个反对称 2s一个电子自旋自由
+
+## 8.6 Antisymmetric Wave Functions Can Be Represented by Slater Determinants                                                                                                                                                                         用斯莱特行列式表示反对称波函数
+
+MIT Slater 
+
+用行列式表示
+$$
+\begin{aligned}
+\Psi \left ( 1,2 \right ) &= \begin{vmatrix} { 1 s \alpha \left ( 1 \right ) } & { 1 s \beta \left ( 1 \right ) } \\ { 1 s \alpha \left ( 2 \right ) } & { 1 s \beta \left ( 2 \right ) }\end{vmatrix} \\
+&= 1 s \left ( 1 \right ) \alpha \left ( 1 \right ) ! s \left ( 2 \right ) \beta \left ( 2 \right ) - 1 s \left ( 1 \right ) \beta \left ( 1 \right ) 1 s \left ( 2 \right ) \alpha \left ( 2 \right ) \\ 
+&= 1 s \left ( 1 \right ) 1 s \left ( 2 \right ) \left [ \alpha \left ( 1 \right ) \beta \left ( 2 \right ) - \beta \left ( 1 \right ) \alpha \left ( 2 \right ) \right ]
+\end{aligned}
+$$
+
+描述的是00单重态 空间部分对称，自旋部分反对称
+
+基态三重态，则是+，自旋部分对称，空间部分不是反对称，不可能
+
+激发态 1s 2s 可以构造三重态$1 s \left ( 1 \right ) 2 s \left ( 2 \right ) -1 s \left ( 2 \right ) 2 s \left ( 1 \right )$
+
+归一化
+$$
+\Psi \left ( 1,2 \right ) = \frac{1}{\sqrt{2}}\begin{vmatrix} { 1 s \alpha \left ( 1 \right ) } & { 1 s \beta \left ( 1 \right ) } \\ { 1 s \alpha \left ( 2 \right ) } & { 1 s \beta \left ( 2 \right ) }\end{vmatrix}
+$$
+
+N电子体系波函数 行：电子 列：自旋轨道
+$$
+\Psi\left (1,2, \ldots, N\right )=\frac{1}{\sqrt{N !}}\begin{vmatrix}
+\chi_{1}\left (1\right ) & \chi_{2}\left (1\right ) & \dots & \chi_{N}\left (1\right ) \\
+\chi_{1}\left (2\right ) & \chi_{2}\left (2\right ) & \dots & \chi_{N}\left (2\right ) \\
+\vdots & \vdots & \ddots & \vdots \\
+\chi_{1}\left (N\right ) & \chi_{2}\left (N\right ) & \dots & \chi_{N}\left (N\right )
+\end{vmatrix}
+$$
+
+交换两个电子的坐标，可以看出行列式是反对称的
+$$
+\Psi\left (2,1, \ldots, N\right )=\frac{1}{\sqrt{N !}}\begin{vmatrix}
+\chi_{1}\left (2\right ) & \chi_{2}\left (2\right ) & \dots & \chi_{N}\left (2\right ) \\
+\chi_{1}\left (1\right ) & \chi_{2}\left (1\right ) & \dots & \chi_{N}\left (1\right ) \\
+\vdots & \vdots & \ddots & \vdots \\
+\chi_{1}\left (N\right ) & \chi_{2}\left (N\right ) & \dots & \chi_{N}\left (N\right )
+\end{vmatrix}=-\Psi\left (1,2, \ldots, N\right )
+$$
+
+使用对角元简写为$\Psi = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle$
+
+如果两列相等，行列式为零，波函数不存在
+
+#### Pauli Exclusion Principle 泡利不相容原理
+
+No two electrons in an atom or a molecule can have the same spin orbital.
+
+## 8.7 The Hartree-Fock Method
+
+独立粒子近似 平均场
+$$
+| \psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle
+$$
 
 $$
-\left. { \Psi _ { 1 } ( 1,2 ) = \psi ( 1,2 ) + \psi ( 2,1 ) = 1 s \alpha ( 1 ) 1 s \beta ( 2 ) + 1 s \alpha ( 2 ) 1 s \beta ( 1 ) } \\ 
-{ \Psi _ { 2 } ( 1,2 ) = \psi ( 1,2 ) - \psi ( 2,1 ) = 1 s \alpha ( 1 ) 1 s \beta ( 2 ) - 1 s \alpha ( 2 ) 1 s \beta ( 1 ) } \right.
+E _ { 0 } \left [ \{ \alpha _ { a } \} \right ] = \langle \psi _ { 0 } | \hat { H } | \psi _ { 0 } \rangle = \sum _ { a = 1 } ^ { N } \langle \chi _ { a } | h | \chi _ { a } \rangle + \frac { 1 } { 2 } \sum _ { a } ^ { N } \sum _ { b } ^ { N } \left [ \langle \chi _ { a } \chi _ { b } | \chi _ { a } \chi _ { b } \rangle - \langle \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } \rangle \right ]
 $$
 
+$$
+\langle \chi _ { a } | h | \chi _ { a } \rangle = \int d \vec { x } _ { 1 } \chi _ { a } ^ { * } \left ( 1 \right ) h \left ( 1 \right ) \chi _ { a } \left ( 1 \right )
+$$
 
+$$
+\langle \chi _ { a } \chi _ { b } | \chi _ { a } \chi _ { b } \rangle = \int d x _ { 1 } d \vec { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 1 \right ) \chi _ { b } \left ( 2 \right )
+$$
+
+$E _ { 0 } \left [ \{ \chi _ { a } \} \right ]$ $\int d \vec { x } _ { 1 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } \left ( 1 \right ) = \delta _ { a b }$
+
+canonical HF equation:
+
+$$
+f | \chi _ { a } \rangle = \varepsilon _ { a } | \chi _ { a } \rangle \quad \text { Or } \quad f \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \varepsilon _ { a } \chi _ { a } \left ( 1 \right )
+$$
+
+$$
+f \left ( 1 \right ) = h \left ( 1 \right ) + \sum _ { i } \left [ J _ { b } \left ( 1 \right ) - K _ { b } \left ( 1 \right ) \right ] = h \left ( 1 \right ) + v ^ { \| F } \left ( 1 \right )
+$$
+
+$$
+v ^ { H F } \left ( 1 \right ) = \sum _ { b } \left [ J _ { b } \left ( 1 \right ) - K _ { b } \left ( 1 \right ) \right ]
+$$
+
+The Coulomb operator:
+
+$$
+J _ { b } \left ( 1 \right ) = \int d \overline { x } _ { 2 } | \chi _ { b } \left ( 2 \right ) | ^ { 2 } r _ { 12 } ^ { - 1 } \\
+J _ { b } \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \left [ \left [ d \vec { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { b } \left ( 2 \right ) \right ] \chi _ { a } \left ( 1 \right ) \right]
+$$
+
+The exchange operator:
+
+$$
+K _ { b } \left ( 1 \right ) = | \int d \overline { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } P _ { 12 } \chi _ { b } \left ( 2 \right ) \rfloor \\
+K _ { b } \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = | \int d \overline { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } P _ { 12 } \chi _ { b } \left ( 2 \right ) | \chi _ { a } \left ( 1 \right ) \\
+= \left [ \int d x _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 2 \right ) | \chi _ { b } \left ( 1 \right ) \right]
+$$
+
+$$
+\langle \chi _ { a } \left ( 1 \right ) J _ { b } \left ( 1 \right ) \rangle \chi _ { a } \left ( 1 \right ) \rangle = \int d x _ { 1 } d \overline { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 1 \right ) \chi _ { b } \left ( 2 \right ) = \langle a b | a b \rangle \\
+\langle \chi _ { a } \left ( 1 \right ) | K _ { b } \left ( 1 \right ) \rangle _ { a } \left ( 1 \right ) \rangle = \int d \overline { x } _ { 1 } d \overline { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { b } \left ( 1 \right ) \chi _ { a } \left ( 2 \right ) = \langle a b | b a \rangle
+$$
+
+the spin orbital energy corresponding to the spin orbital
+
+$$
+\varepsilon _ { a } = \langle \chi _ { a } | f | \chi _ { a } \rangle = \langle a | h | a \rangle + \sum _ { L } \langle a b \| a b \rangle
+$$
+
+$$
+E _ { 0 } = \sum _ { a } ^ { N } \langle a | h | a \rangle + \frac { 1 } { 2 } \sum _ { a } ^ { N } \sum _ { b } ^ { N } \langle a b \| a b \rangle \left ( \neq \sum _ { a } ^ { N } \varepsilon _ { a } \right )
+$$
+
+### Restricted HF (RHF)
+
+$$
+\chi _ { i } \left ( \vec { x } \right ) = \begin{cases} 
+{ \psi _ { j } \left ( \vec { r } \right ) \alpha \left ( \sigma \right ) } \\ 
+{ \psi _ { j } \left ( \vec { r } \right ) \beta \left ( \sigma \right ) }
+\end{cases}
+$$
+
+$$
+\psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle = | \psi _ { 1 } \overline { \psi } _ { 1 } \cdots \psi _ { a } \overline { \psi } _ { a } \cdots \psi _ { N / 2 } \overline { \psi } _ { N / 2 } \rangle
+$$
+
+$$
+f \left ( \vec { r } _ { 1 } \right ) \psi _ { j } \left ( \vec { r } _ { 1 } \right ) = \varepsilon _ { j } \psi _ { j } \left ( \vec { r } _ { 1 } \right )
+$$
+
+### Restricted open-shell HF (ROHF)
+
+$$
+\psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle = | \psi _ { 1 } \overline { \psi } _ { 1 } \cdots \psi _ { a } \overline { \psi } _ { a } \cdots \psi _ { N / 2 } \overline { \psi } _ { N / 2 } \rangle
+$$
+
+$$
+f \left ( \vec { r } _ { 1 } \right ) \psi _ { j } \left ( \vec { r } _ { 1 } \right ) = \varepsilon _ { j } \psi _ { j } \left ( \vec { r } _ { 1 } \right )
+$$
+
+### Unrestricted HF (UHF)
+
+$$
+\Psi _ { U H F } = | \psi _ { 1 } ^ { \alpha } \overline { \psi _ { 1 } ^ { \beta } } \psi _ { 2 } ^ { \alpha } \overline { \psi _ { 2 } ^ { \beta } } \cdots \rangle
+$$
+
+$$
+f ^ { \alpha } \left ( 1 \right ) \psi _ { j } ^ { \alpha } \left ( 1 \right ) = \varepsilon _ { j } ^ { \alpha } \psi _ { j } ^ { \alpha } \left ( 1 \right ) ; \quad f ^ { \beta } \left ( 1 \right ) \psi _ { j } ^ { \beta } \left ( 1 \right ) = \varepsilon _ { j } ^ { \beta } \psi _ { j } ^ { \beta } \left ( 1 \right )
+$$
+
+### Hartree‒Fock‒Roothaan Equation
+
+$$
+
+$$
+
+$$
+
+$$
+
+$$
+S _ { \mu \nu } = \int d \vec { r } _ { 1 } \phi _ { u } ^ { * } \left ( \vec { r } _ { 1 } \right ) \phi _ { v } \left ( \vec { r } _ { 1 } \right ) \quad F _ { i v } = \int d \vec { r } _ { 1 } \phi _ { u } ^ { * } \left ( 1 \right ) f \left ( 1 \right ) \phi _ { v } \left ( 1 \right )
+$$
+
+$$
+\vec{C} = \begin{pmatrix} { \vec{c} ^ { 1 } } &{ \vec{c} ^ { 2 } } &\cdots &{ \vec{c} ^ { N } } \end{pmatrix} =
+\begin{pmatrix}
+{ c _ { 11 } } & { c _ { 11 } } &\cdots & { c _ { N1 } } \\ 
+{ c _ { 12 } } & { c _ { 22 } } &\cdots & { c _ { N2 } } \\
+\vdots &\vdots &\ddots &\vdots \\
+{ c _ { 1N } } & { c _ { 2N } } &\cdots & { c _ { NN } }
+\end{pmatrix} \quad \varepsilon=\begin{pmatrix}
+{ E _ { 1 } } &&& \\ & { E _ { 2 } } && \\ && \ddots & \\
+&&& { E _ { N } }\end{pmatrix}
+$$
+
+Koopman’s Theorem
+
+$$
+{ IP = ^ { N - 1 } E _ { c } - ^ { N } E _ { 0 } = - \varepsilon _ { c } } \\ { EA = ^ { N } E _ { 0 } - ^ { N + 1 } E ^ { r } = - \varepsilon }
+$$
+
+### The Building-up Principle
+
+### What Is Missing in the HF Method?
