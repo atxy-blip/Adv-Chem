@@ -499,11 +499,19 @@ No two electrons in an atom or a molecule can have the same spin orbital.
 
 ## 8.7 The Hartree-Fock Method
 
-独立粒子近似 平均场
+独立粒子近似 平均场 类似于变分法
+
+两句话描述：
+
+1. 体系波函数用一个行列式描述，这个行列式由一组正交归一的自旋轨道组成。
+
+2. 根据限制求行列式对应的泛函的最小期望值，得到的一组方程。
+
 $$
 | \psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle
 $$
 
+the Slater-Condon rule
 $$
 E _ { 0 } \left [ \{ \alpha _ { a } \} \right ] = \langle \psi _ { 0 } | \hat { H } | \psi _ { 0 } \rangle = \sum _ { a = 1 } ^ { N } \langle \chi _ { a } | h | \chi _ { a } \rangle + \frac { 1 } { 2 } \sum _ { a } ^ { N } \sum _ { b } ^ { N } \left [ \langle \chi _ { a } \chi _ { b } | \chi _ { a } \chi _ { b } \rangle - \langle \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } \rangle \right ]
 $$
@@ -516,43 +524,51 @@ $$
 \langle \chi _ { a } \chi _ { b } | \chi _ { a } \chi _ { b } \rangle = \int d x _ { 1 } d \vec { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 1 \right ) \chi _ { b } \left ( 2 \right )
 $$
 
-$E _ { 0 } \left [ \{ \chi _ { a } \} \right ]$ $\int d \vec { x } _ { 1 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } \left ( 1 \right ) = \delta _ { a b }$
+泛函是函数的函数 
+
+使用限制$\int d \vec { x } _ { 1 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } \left ( 1 \right ) = \delta _ { a b }$求$E _ { 0 } \left [ \{ \chi _ { a } \} \right ]$的最小值
 
 canonical HF equation:
 
 $$
-f | \chi _ { a } \rangle = \varepsilon _ { a } | \chi _ { a } \rangle \quad \text { Or } \quad f \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \varepsilon _ { a } \chi _ { a } \left ( 1 \right )
+f | \chi _ { a } \rangle = \varepsilon _ { a } | \chi _ { a } \rangle \quad \text { or } \quad f \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \varepsilon _ { a } \chi _ { a } \left ( 1 \right )
 $$
 
 $$
-f \left ( 1 \right ) = h \left ( 1 \right ) + \sum _ { i } \left [ J _ { b } \left ( 1 \right ) - K _ { b } \left ( 1 \right ) \right ] = h \left ( 1 \right ) + v ^ { \| F } \left ( 1 \right )
+f \left ( 1 \right ) = h \left ( 1 \right ) + \sum _ { b } \left [ J _ { b } \left ( 1 \right ) - K _ { b } \left ( 1 \right ) \right ] = h \left ( 1 \right ) + v ^ { \text{HF} } \left ( 1 \right )
 $$
 
 $$
-v ^ { H F } \left ( 1 \right ) = \sum _ { b } \left [ J _ { b } \left ( 1 \right ) - K _ { b } \left ( 1 \right ) \right ]
+v ^ { \text{HF} } \left ( 1 \right ) = \sum _ { b } \left [ J _ { b } \left ( 1 \right ) - K _ { b } \left ( 1 \right ) \right ]
 $$
 
-The Coulomb operator:
+$v ^ { \text{HF} } \left ( 1 \right )$有效单电子势，有两项，库伦算符和交换算符 每次解一个方程就可以
 
+库伦算符the Coulomb operator：
 $$
-J _ { b } \left ( 1 \right ) = \int d \overline { x } _ { 2 } | \chi _ { b } \left ( 2 \right ) | ^ { 2 } r _ { 12 } ^ { - 1 } \\
-J _ { b } \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \left [ \left [ d \vec { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { b } \left ( 2 \right ) \right ] \chi _ { a } \left ( 1 \right ) \right]
-$$
-
-The exchange operator:
-
-$$
-K _ { b } \left ( 1 \right ) = | \int d \overline { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } P _ { 12 } \chi _ { b } \left ( 2 \right ) \rfloor \\
-K _ { b } \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = | \int d \overline { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } P _ { 12 } \chi _ { b } \left ( 2 \right ) | \chi _ { a } \left ( 1 \right ) \\
-= \left [ \int d x _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 2 \right ) | \chi _ { b } \left ( 1 \right ) \right]
+J _ { b } \left ( 1 \right ) = \int d \vec { x } _ { 2 } | \chi _ { b } \left ( 2 \right ) | ^ { 2 } r _ { 12 } ^ { - 1 } \\
+J _ { b } \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \left [ \int d \vec { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { b } \left ( 2 \right ) \right ] \chi _ { a } \left ( 1 \right )
 $$
 
+(1)表示只与电子1有关 两个电子的相互作用
+
+交换算符：
 $$
-\langle \chi _ { a } \left ( 1 \right ) J _ { b } \left ( 1 \right ) \rangle \chi _ { a } \left ( 1 \right ) \rangle = \int d x _ { 1 } d \overline { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 1 \right ) \chi _ { b } \left ( 2 \right ) = \langle a b | a b \rangle \\
-\langle \chi _ { a } \left ( 1 \right ) | K _ { b } \left ( 1 \right ) \rangle _ { a } \left ( 1 \right ) \rangle = \int d \overline { x } _ { 1 } d \overline { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { b } \left ( 1 \right ) \chi _ { a } \left ( 2 \right ) = \langle a b | b a \rangle
+K _ { b } \left ( 1 \right ) = \left [ \int d \vec { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } P _ { 12 } \chi _ { b } \left ( 2 \right ) \right] \\
 $$
 
-the spin orbital energy corresponding to the spin orbital
+$$
+K _ { b } \left ( 1 \right ) \chi _ { a } \left ( 1 \right ) = \left [ \int d \vec { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } P _ { 12 } \chi _ { b } \left ( 2 \right ) \right] \chi _ { a } \left ( 1 \right ) \\
+= \left [ \int d \vec { x } _ { 2 } \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 2 \right ) \right] \chi _ { b } \left ( 1 \right )
+$$
+
+
+$$
+\langle \chi _ { a } \left ( 1 \right ) J _ { b } \left ( 1 \right ) \rangle \chi _ { a } \left ( 1 \right ) \rangle = \int d x _ { 1 } d \vec { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { a } \left ( 1 \right ) \chi _ { b } \left ( 2 \right ) = \langle a b | a b \rangle \\
+\langle \chi _ { a } \left ( 1 \right ) | K _ { b } \left ( 1 \right ) \rangle _ { a } \left ( 1 \right ) \rangle = \int d \vec { x } _ { 1 } d \vec { x } _ { 2 } \chi _ { a } ^ { * } \left ( 1 \right ) \chi _ { b } ^ { * } \left ( 2 \right ) r _ { 12 } ^ { - 1 } \chi _ { b } \left ( 1 \right ) \chi _ { a } \left ( 2 \right ) = \langle a b | b a \rangle
+$$
+
+$\varepsilon _ { i }$：与$\chi_i$有关的自旋轨道能量
 
 $$
 \varepsilon _ { a } = \langle \chi _ { a } | f | \chi _ { a } \rangle = \langle a | h | a \rangle + \sum _ { L } \langle a b \| a b \rangle
@@ -562,8 +578,13 @@ $$
 E _ { 0 } = \sum _ { a } ^ { N } \langle a | h | a \rangle + \frac { 1 } { 2 } \sum _ { a } ^ { N } \sum _ { b } ^ { N } \langle a b \| a b \rangle \left ( \neq \sum _ { a } ^ { N } \varepsilon _ { a } \right )
 $$
 
+
+
+此方法有多个变种：
+
 ### Restricted HF (RHF)
 
+每个空间轨道被偶数个电子占据（双占据） 闭壳层
 $$
 \chi _ { i } \left ( \vec { x } \right ) = \begin{cases} 
 { \psi _ { j } \left ( \vec { r } \right ) \alpha \left ( \sigma \right ) } \\ 
@@ -571,8 +592,9 @@ $$
 \end{cases}
 $$
 
+行列式为 有横线的是beta电子，没有的是alpha电子
 $$
-\psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle = | \psi _ { 1 } \overline { \psi } _ { 1 } \cdots \psi _ { a } \overline { \psi } _ { a } \cdots \psi _ { N / 2 } \overline { \psi } _ { N / 2 } \rangle
+| \psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle = \left | \psi _ { 1 } \overline { \psi } _ { 1 } \cdots \psi _ { a } \overline { \psi } _ { a } \cdots \psi _ { N / 2 } \overline { \psi } _ { N / 2 } \right \rangle
 $$
 
 $$
@@ -581,8 +603,11 @@ $$
 
 ### Restricted open-shell HF (ROHF)
 
+奇数个电子 除了双占据的轨道外，还有一个或多个占据的轨道
+
+最后一项是一个alpha电子
 $$
-\psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle = | \psi _ { 1 } \overline { \psi } _ { 1 } \cdots \psi _ { a } \overline { \psi } _ { a } \cdots \psi _ { N / 2 } \overline { \psi } _ { N / 2 } \rangle
+| \psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle = | \psi _ { 1 } \overline { \psi } _ { 1 } \cdots \psi _ { a } \overline { \psi } _ { a } \cdots { \psi } _ { N / 2 } \rangle
 $$
 
 $$
@@ -591,26 +616,48 @@ $$
 
 ### Unrestricted HF (UHF)
 
+有两套空间轨道，一套装alpha电子，另一套装beta电子
+
+psi2不相等
 $$
-\Psi _ { U H F } = | \psi _ { 1 } ^ { \alpha } \overline { \psi _ { 1 } ^ { \beta } } \psi _ { 2 } ^ { \alpha } \overline { \psi _ { 2 } ^ { \beta } } \cdots \rangle
+\Psi _ { \text{UHF} } = \left | \psi _ { 1 } ^ { \alpha } \overline { \psi _ { 1 } ^ { \beta } } \psi _ { 2 } ^ { \alpha } \overline { \psi _ { 2 } ^ { \beta } } \cdots \right \rangle
 $$
 
+有两套HF方程
 $$
 f ^ { \alpha } \left ( 1 \right ) \psi _ { j } ^ { \alpha } \left ( 1 \right ) = \varepsilon _ { j } ^ { \alpha } \psi _ { j } ^ { \alpha } \left ( 1 \right ) ; \quad f ^ { \beta } \left ( 1 \right ) \psi _ { j } ^ { \beta } \left ( 1 \right ) = \varepsilon _ { j } ^ { \beta } \psi _ { j } ^ { \beta } \left ( 1 \right )
 $$
 
+锂原子有3个电子 ROHF 1s装两个电子 或UHF 1s a 1s b
+
+用UHF表示 轨道标号 空间部分不一样 2s alpha 同样是1s有 alpha beta psi1改成1s
+
+UHF有自旋污染 不是本征函数 只能说近似单态或近似三态 RHF是纯的
+
+
+
+He原子 RHF $| \psi _ { 1s } \overline { \psi } _ { 1s } \psi _ { 2s } \overline { \psi } _ { 2s } \rangle$
+
 ### Hartree‒Fock‒Roothaan Equation
 
+线性变分原理
 $$
 
 $$
 
+Hartree‒Fock‒Roothaan Equation
+$$
+\sum F _ { \mu \nu } c _ { \nu } = \varepsilon \sum S _ { \mu \nu } c _ { \nu } \quad \text { or } \quad F c = \varepsilon S c
 $$
 
-$$
-
+矩阵
 $$
 S _ { \mu \nu } = \int d \vec { r } _ { 1 } \phi _ { u } ^ { * } \left ( \vec { r } _ { 1 } \right ) \phi _ { v } \left ( \vec { r } _ { 1 } \right ) \quad F _ { i v } = \int d \vec { r } _ { 1 } \phi _ { u } ^ { * } \left ( 1 \right ) f \left ( 1 \right ) \phi _ { v } \left ( 1 \right )
+$$
+
+解不止一个，使用下标进行区分， ci是列向量
+$$
+F c_i = \varepsilon_i S c_i
 $$
 
 $$
@@ -625,12 +672,295 @@ $$
 &&& { E _ { N } }\end{pmatrix}
 $$
 
-Koopman’s Theorem
-
 $$
-{ IP = ^ { N - 1 } E _ { c } - ^ { N } E _ { 0 } = - \varepsilon _ { c } } \\ { EA = ^ { N } E _ { 0 } - ^ { N + 1 } E ^ { r } = - \varepsilon }
+F^{\prime} C^{\prime} = C^{\prime} E
 $$
 
-### The Building-up Principle
+解HF方程得到一组轨道和它的轨道
+
+轨道能量的物理意义
+
+#### Koopman’s Theorem
+
+$$
+{ IP = {^ { N - 1 } E _ { i }} - {^ { N } E _ { 0 }} = - \varepsilon _ { i } } \\ { EA = {^ { N } E _ { 0 }} - {^ { N + 1 } E ^ { r }} = - \varepsilon _ r }
+$$
+
+电离是把电子打掉 变成自由电子 吸收的能量 第i个轨道电离能 占据轨道occupied orbital 电离能等于轨道能量的负值
+
+得到电子 填到新的轨道 第r个轨道电子亲和能 空轨道virtual orbital
+
+光电子能谱 打掉电子测量光谱
+
+计算结果与实验结果吻合得很好
+
+
+
+对两个分子进行HF计算 a的电子跑到b上
+
+### The Building-up Principle 构造原理
+
+the Aufbau principle
+
+将电子按轨道能量从低到高往上排
+$$
+1s \quad 2s \quad 2p \quad 3s \quad 3p \quad 4s \quad 3d \quad 4p \quad 5s \quad 4d \quad 5p \quad 6s \quad \cdots
+$$
+对多电子原子，2s和2p的简并性被打破
+
+此原理并不绝对 比如Xenon
 
 ### What Is Missing in the HF Method?
+
+## 8.8 A Term Symbol Gives A Detailed Description of An Electron Configuration
+
+The total orbital angular momentum and total spin angular momentum
+are given by the vector sums
+$$
+\vec{L}=\sum_{i}\vec{l}_i \quad \vec{S}=\sum_{i}\vec{s}_i
+$$
+The z components of L and S are given by scalar sums
+$$
+L _ { z } = \sum _ { i } l _ { i z } = \sum _ { i } m _ { i l } = M _ { L } \quad S _ { z } = \sum _ { i } s _ { i k } = \sum _ { i } m _ { i s } = M
+$$
+The total angular momentum J is given by
+$$
+J=L+S
+$$
+and the z component is
+$$
+J _ { z } = L _ { z } + S _ { z } = M _ { L } + M _ { S } = M
+$$
+An atomic term （原子谱项）:
+$$
+^{2S+1}L_{J}
+$$
+L: total orbital angular momentum; S: total spin angular momentum; J: total angular momentum
+
+Degeneracy of an atomic term: $(2L+1)(2S+1)$
+
+### The configuration of a closed subshell: 1 S
+
+$$
+\Psi = | 1 s \alpha 1 s \beta |
+$$
+
+### Two electrons in different subshells:
+
+Find the possible values of L from l 1 and l 2 ;
+and the possible value of S from s 1 and s 2 .
+For an electronic configuration: 1s 2 2s 2 2p 1 3d 1
+We only need to consider two subshells, 2p 1 3d 1
+(l 1 =1, l 2 =2, s 1 =1/2, s 2 =1/2) L=3,2,1; S=0,1
+Thus, the terms are: 1 P, 1 D, 1 F, 3 P, 3 D, 3 F;
+$$
+\Psi = \sum _ { i } C _ { i } D _ { i } \quad D _ { 1 } = | 1 s \alpha 1 s \beta 2 s \alpha 2 s \beta 2 p _ { + 1 } \alpha 3 d _ { + 2 } \alpha |
+$$
+
+###  Two electrons in the same subshell
+
+### Steps for Identifying Term Symbols
+
+1. Write out all possible unique determinants with non-negative M L
+and M S values and arrange them into groups.
+2. Identify the highest M S value in the box, and for all determinants
+with this M S value, find out the highest M L value.
+3. For this S and L combination, the term symbol is 3 P.
+4. Because the level with quantum numbers L and S contains determinants, one must remove from the original box this number of determinants to get a new Table.
+5. After deleting four entries, one can obtain the following Table and returns to step 2 and carries out the process again.
+
+
+
+> Example 8.3
+
+## 8.9 The Allowed Values of J are L+S, L+S-1, …, |L-S|
+
+The values of J for the term symbols can be determined in terms
+of the values of L and S，
+$$
+J=L+S
+$$
+
+$$
+J = L + S , L + S - 1 , L + S - 2 , \ldots , | L - S |
+$$
+
+## 8.10 Hund’s Rules Are Used to Determine the Term Symbol of the Ground Electronic State
+
+### Hund’s Rules
+
+## 8.11 Atomic Term Symbols Are Used to Describe Atomic Spectra
+
+Atomic spectral lines can be assigned to transitions between energy
+levels described by atomic term symbols. The fine structure of
+atomic spectra lines is caused by the spin-orbital coupling.
+
+The Hamiltonian of a multielectron atom can be written as:
+$$
+\hat { H } = - \frac { 1 } { 2 } \sum _ { j } \nabla _ { j } ^ { 2 } - \sum _ { j } \frac { Z } { r _ { j } } + \sum _ { i < j } \frac { 1 } { r _ { i j } } + \sum _ { j } \xi ( r _ { j } ) l _ { j } \cdot s _ { j }
+$$
+The last term describes the spin-orbital coupling. One can express the Hamiltonian into the following form,
+$$
+\hat { H } = \hat { H } _ {0} + \hat { H } _ {\text{S.O.}}
+$$
+
+### The Spin-Orbit Interaction Term
+
+$$
+\hat { H } _ { \text{S.O.}} = \sum _ { i } \xi _ { i } ( r _ { i } ) \hat { L } _ { i } \cdot \hat { S } _ { i } \quad \hat { H } = \hat { H } _ { 0 } + \hat { H } _ { \text{S.O.} }
+$$
+
+It is difficult to find the eigenfunctions and eigenvalues of the operator.
+The effect of the spin-orbit interaction term is usually estimated with first-order perturbation theory.
+$$
+\vec {J} = \vec {L} + \vec {S}
+$$
+
+$$
+\left. { \hat { L } \cdot \hat { S } = \frac { 1 } { 2 } ( \hat { J } ^ { 2 } - \hat { L } ^ { 2 } - \hat { S } ^ { 2 } ) } \\ { \hat { L } \cdot \hat { S } \Psi = \frac { 1 } { 2 } [ J ( J + 1 ) - L ( L + 1 ) - S ( S + 1 ) ] \Psi } \right.
+$$
+
+$$
+E _ { n } ^ { ( 1 ) } = \int \psi _ { n } ^ { ( 0 ) * } \hat { H } _ { S O } ^ { ( 1 ) } \psi _ { n } ^ { ( 0 ) } d \tau
+$$
+
+$$
+\hat { H } _ { S O } ^ { ( 1 ) } = \frac { Z } { 2 ( 137 ) ^ { 2 } } \frac { 1 } { r ^ { 3 } } \hat { l } \cdot \hat { S }
+$$
+
+$$
+E _ { n } ^ { ( 1 ) } = \frac { 1 } { 2 } \{ j ( j + 1 ) - l ( l + 1 ) - s ( s + 1 ) \} \frac { Z } { 2 ( 137 ) ^ { 2 } } \langle \frac { 1 } { r ^ { 3 } } \rangle
+$$
+
+$$
+\langle \frac { 1 } { r ^ { 3 } } \rangle = \frac { Z ^ { 3 } } { n ^ { 3 } l ( l + 1 ) ( l + \frac { 1 } { 2 } ) }
+$$
+
+$$
+E _ { n } ^ { ( 1 ) } = \frac { Z ^ { 4 } } { 2 ( 137 ) ^ { 2 } n ^ { 3 } } \frac { \{ j ( j + 1 ) - l ( l + 1 ) - s ( s + 1 ) \} } { 2 l ( l + 1 ) ( l + \frac { 1 } { 2 } ) } \quad \text { a. } u
+$$
+
+$$
+E _ { s o . } = \frac { 1 } { 2 } A [ J ( J + 1 ) - L ( L + 1 ) - S ( S + 1 ) ]
+$$
+
+### The spin-orbital effect is important in heavier atoms
+
+## Supplementary Material 补充材料
+
+### The Derivation of the Hartree-Fock Equation
+
+#### 1 Functional variation
+
+试探波函数
+$$
+E(\widetilde{\Phi}) =\langle \widetilde{\Phi}|\hat{H}|\widetilde{\Phi}\rangle 
+$$
+
+
+$$
+\tilde { \Phi } \rightarrow \tilde { \Phi } + \delta \tilde { \Phi } \quad ( \tilde { \Phi } ^ { * } \rightarrow \tilde { \Phi } ^ { * } + \delta \tilde { \Phi } ^ { * } )
+$$
+
+$$
+\begin{aligned}
+E(\widetilde{\Phi}+\delta \widetilde{\Phi}) &=\langle\widetilde{\Phi}+\delta \widetilde{\Phi}|\hat{H}| \widetilde{\Phi}+\delta \widetilde{\Phi}\rangle \\
+&=E(\widetilde{\Phi})+\langle\delta \widetilde{\Phi} \hat{H} \widetilde{\Phi}\rangle+\langle\widetilde{\Phi} \hat{H} | \delta \widetilde{\Phi}\rangle\}+\ldots \\
+&=E(\widetilde{\Phi})+\delta E+\cdots
+\end{aligned}
+$$
+
+一阶泛函=0
+$$
+\delta E = \langle \delta \tilde { \Phi } | \hat { H } | \tilde { \Phi } \rangle + \langle \tilde { \Phi } | \hat { H } | \delta \tilde { \Phi } \rangle = 0
+$$
+
+stationary point
+
+#### 2 Minimization of the energy of a single determinant
+
+单一轨道$| \psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle$
+
+中括弧代替尖括弧，意义一样
+$$
+E _ { 0 } = \langle \psi _ { 0 } | \hat { H } | \psi _ { 0 } \rangle = \sum _ { a = 1 } ^ { N } [ a | h | a ] + \frac { 1 } { 2 } \sum _ { a } ^ { N } \sum _ { b } ^ { N } ( [ a a | b b ] - [ a b | b a ] ) = E _ { 0 } [ \{ \chi _ { a } \} ]
+$$
+
+$$
+[ a | h | a ] = \int d \vec { x } _ { 1 } \chi _ { a } ^ { * } ( 1 ) h \chi _ { a } ( 1 )
+$$
+
+$$
+[ a a | b b ] = \int d \overline { x } _ { 1 } d \overline { x } _ { 2 } \chi _ { a } ^ { * } ( 1 ) \chi _ { a } ( 1 ) r _ { 12 } ^ { - 1 } \chi _ { b } ^ { * } ( 2 ) \chi _ { b } ( 2 )
+$$
+
+E看成一组轨道的泛函 泛函的极值问题，约束条件为$\int d \overline { x } _ { 1 } \chi _ { a } ^ { * } ( 1 ) \chi _ { b } ( 1 ) = [ a | b ] = \delta _ { a b }$
+
+定义自旋轨道的泛函$L [ \{ \chi _ { a } \} ]$
+$$
+L [ \{ \chi _ { a } \} ] = E _ { 0 } [ \{ \chi _ { a } \} ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } \varepsilon _ { ba } ( [ a | b ] - \delta _ { a b } )
+$$
+
+拉格朗日量
+
+L是实数
+$$
+\begin{aligned}
+L ^ { * } &= E _ { 0 } [ \{ \chi _ { a } \} ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } \varepsilon _ { b a } ^ { * } ( [ a | b ] ^ { * } - \delta _ { a b } ) \\
+&= E _ { 0 } [ \{ \chi _ { a } \} ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } \varepsilon _ { a b } ^ { * } ( [ b | a ] ^ { * } - \delta _ { a b } ) \\
+&= E _ { 0 } [ \{ \chi _ { a } \} ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } \varepsilon _ { a b } ^ { * } ( [ a | b ] - \delta _ { a b } )
+\end{aligned}
+$$
+
+$\varepsilon _ { ba } =\varepsilon _ { a b } ^ { * }$ 酉矩阵 积分指标的交换
+
+令$\chi _ { a } \rightarrow \chi _ { a } + \delta \chi _ { a }$
+$$
+\delta [ a | b ] = \delta \int d \overline { x } _ { 1 } \chi _ { a } ^ { * } ( 1 ) \chi _ { b } ( 1 ) = [ \delta \chi _ { a } | \chi _ { b } ] + [ \chi _ { a } | \delta \chi _ { b } ]
+$$
+
+$$
+\begin{aligned}
+\delta E _ { 0 } &= \sum _ { i = 1 } ^ { N } ( [ \delta \chi _ { a } | h | \chi _ { a } ] + [ \chi _ { a } | h | \delta \chi _ { a } ] )\\
+&+ \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } ( [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ] + [ \chi _ { a } \delta \chi _ { a } | \chi _ { b } \chi _ { b } ] + [ \chi _ { a } \chi _ { a } | \delta \chi _ { b } \chi _ { b } ] + [ \chi _ { a } \chi _ { a } | \chi _ { b } \delta \chi _ { b } ] ) \\
+&- \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } ( [ \delta \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } ] + [ \chi _ { a } \delta \chi _ { b } | \chi _ { b } \chi _ { a } ] + [ \chi _ { a } \chi _ { b } | \delta \chi _ { b } \chi _ { a } ] + [ \chi _ { a } \chi _ { b } | \chi _ { b } \delta \chi _ { a } ] )
+\end{aligned}
+$$
+
+$$
+\frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \chi _ { a } \chi _ { a } | \delta \chi _ { b } \chi _ { b } ] = \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { b } \chi _ { b } | \chi _ { a } \chi _ { a } ] = \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ]
+$$
+
+$$
+[ \chi _ { a } \delta \chi _ { a } | \chi _ { b } \chi _ { b } ] = [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ] ^ { * }
+$$
+
+$$
+\sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \chi _ { a } \delta \chi _ { b } | \chi _ { b } \chi _ { a } ] = \sum _ { a } \sum _ { b } [ \chi _ { b } \delta \chi _ { a } | \chi _ { a } \chi _ { b } ]
+= \left \{ \sum _ { a } \sum _ { b } [ \delta \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } ] \right \} ^ {*}
+$$
+
+$$
+\delta E _ { 0 } = \sum _ { a = 1 } ^ { N } [ \delta \chi _ { a } | h | \chi _ { a } ] + \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } ] + C . C
+$$
+
+$$
+\begin{aligned}
+\sum_{a b} \varepsilon_{b a} \delta[a | b] &=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\sum_{a b} \varepsilon_{b a}\left[\chi_{a} | \delta \chi_{b}\right] \\
+&=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\sum_{a b} \varepsilon_{a b}\left[\chi_{b} | \delta \chi_{a}\right] \\
+&=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\sum_{a b} \varepsilon_{b a}^{*}\left[\delta \chi_{a} | \chi_{b}\right]^{*} \\
+&=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+C . C
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\delta_{L}&=\delta_{E_{0}}-\sum_{a=1}^{N} \sum_{b=1}^{N} \varepsilon_{b a} \delta[a | b] \\
+&=\sum_{a=1}^{N}\left[\delta \chi_{a}|h| \chi_{a}\right]+\sum_{a=1}^{N} \sum_{b=1}^{N}\left(\left[\delta \chi_{a} \chi_{a} | \chi_{b} \chi_{b}\right]-\left[\delta \chi_{a} \chi_{b} | \chi_{b} \chi_{a}\right]\right)
+-\sum_{a=1}^{N} \sum_{b=1}^{N} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+C . C . \\ 
+&=0
+\end{aligned}
+$$
+
+#### 3 The canonical HF equation
+
