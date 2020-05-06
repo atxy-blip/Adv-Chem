@@ -700,9 +700,8 @@ $$
 
 ### The Building-up Principle 构造原理
 
-the Aufbau principle
+又称the Aufbau principle，将电子按轨道能量从低到高往上排。
 
-将电子按轨道能量从低到高往上排
 $$
 1s \quad 2s \quad 2p \quad 3s \quad 3p \quad 4s \quad 3d \quad 4p \quad 5s \quad 4d \quad 5p \quad 6s \quad \cdots
 $$
@@ -710,12 +709,21 @@ $$
 
 此原理并不绝对 比如Xenon
 
+> 2个$4f$电子有$C_{14}^{2}=91$个不同状态。
+
 ### What Is Missing in the HF Method?
 
-## 8.8 A Term Symbol Gives A Detailed Description of An Electron Configuration
+一部分库伦相互作用没有考虑
 
-The total orbital angular momentum and total spin angular momentum
-are given by the vector sums
+相关能
+$$
+CE=E_{EXACT}-E_{HF}
+$$
+post-HF
+
+## 8.8 A Term Symbol Gives A Detailed Description of An Electron Configuration  光谱项给出电子组态的精确描述
+
+总角动量 总自旋角动量The total orbital angular momentum and total spin angular momentum are given by the vector sums
 $$
 \vec{L}=\sum_{i}\vec{l}_i \quad \vec{S}=\sum_{i}\vec{s}_i
 $$
@@ -731,47 +739,81 @@ and the z component is
 $$
 J _ { z } = L _ { z } + S _ { z } = M _ { L } + M _ { S } = M
 $$
-An atomic term （原子谱项）:
+原子谱项atomic term的定义为:
 $$
 ^{2S+1}L_{J}
 $$
-L: total orbital angular momentum; S: total spin angular momentum; J: total angular momentum
+$L$: total orbital angular momentum; $S$: total spin angular momentum; $J$: total angular momentum
 
-Degeneracy of an atomic term: $(2L+1)(2S+1)$
+2S+1 自旋多重度
 
-### The configuration of a closed subshell: 1 S
+|  L   |  0   |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8  |  9  |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |:--: |:--: |
+|      | S | P | D | F | G | H | I | J | K | L |
 
+原子谱项的简并度$(2L+1)(2S+1)$
+
+### The configuration of a closed subshell: $^{1}S$
+
+$^{1}S$
 $$
-\Psi = | 1 s \alpha 1 s \beta |
+\Psi = | 1 s \alpha \ 1 s \beta |
 $$
 
-### Two electrons in different subshells:
+### Two electrons in different subshells
 
-Find the possible values of L from l 1 and l 2 ;
-and the possible value of S from s 1 and s 2 .
-For an electronic configuration: 1s 2 2s 2 2p 1 3d 1
-We only need to consider two subshells, 2p 1 3d 1
-(l 1 =1, l 2 =2, s 1 =1/2, s 2 =1/2) L=3,2,1; S=0,1
-Thus, the terms are: 1 P, 1 D, 1 F, 3 P, 3 D, 3 F;
+Find the possible values of L from l 1 and l 2 ;and the possible value of S from s 1 and s 2 .For an electronic configuration: 1s 2 2s 2 2p 1 3d 1We only need to consider two subshells, 2p 1 3d 1(l 1 =1, l 2 =2 , s 1 =1/2, s 2 =1/2) L=3,2,1; S=0,1
+
+l1l2对应p和d轨道
+
+角动量耦合规则
+
+原子谱项为 $\ce{^1P ^1D ^1 F ^3 P ^3 D ^3 F}$
+
+For this configuration, the wave function is a linear combination of 60 determinants. Each term corresponds to an energy level.
 $$
-\Psi = \sum _ { i } C _ { i } D _ { i } \quad D _ { 1 } = | 1 s \alpha 1 s \beta 2 s \alpha 2 s \beta 2 p _ { + 1 } \alpha 3 d _ { + 2 } \alpha |
+\Psi = \sum _ { i } C _ { i } D _ { i } \quad D _ { 1 } = | 1 s \alpha\ 1 s \beta\ 2 s \alpha\ 2 s \beta\ 2 p _ { + 1 } \alpha\ 3 d _ { + 2 } \alpha |
 $$
+
+2p13d1能级 f3 21重简并
 
 ###  Two electrons in the same subshell
 
+Take 1s 2 2s 2 2p 2 (the ground state of carbon) as an example.
+
+| $M_S\downarrow\ M_L\rightarrow$ |              0              |  1   |  2   |
+| :---: | :-------------------------: | :--: | :--: |
+|   1   |                             |  $|p_1\ \alpha\ p_0\ \alpha|$  |   $|p_1\ \alpha\ p_{-1}\ \alpha|$   |
+|   0   | $|p_1\ \alpha\ p_1\ \beta|$ | $|p_1\ \alpha\ p_0\ \beta| \\ |p_0\ \alpha\ p_1\ \beta|$ | $|p_1\ \alpha\ p_{-1}\ \beta| \\ |p_{-1}\ \alpha\ p_1\ \beta| \\|p_0\ \alpha\ p_0\ \beta|$ |
+
+一共15个行列式
+
+Pauli不相容，有些不存在
+
 ### Steps for Identifying Term Symbols
 
-1. Write out all possible unique determinants with non-negative M L
-and M S values and arrange them into groups.
-2. Identify the highest M S value in the box, and for all determinants
-with this M S value, find out the highest M L value.
+1. Write out all possible unique determinants with non-negative M L and M S values and arrange them into groups.
+
+2. Identify the highest M S value in the box, and for all determinants with this M S value, find out the highest M L value.
+
 3. For this S and L combination, the term symbol is 3 P.
+
 4. Because the level with quantum numbers L and S contains determinants, one must remove from the original box this number of determinants to get a new Table.
+
+
+
 5. After deleting four entries, one can obtain the following Table and returns to step 2 and carries out the process again.
 
+| $M_S\downarrow\ M_L\rightarrow$ |              0              |              1              |                             2                              |
+| :-----------------------------: | :-------------------------: | :-------------------------: | :--------------------------------------------------------: |
+|                1                |                             |                             |                                                            |
+|                0                | $|p_1\ \alpha\ p_1\ \beta|$ | $|p_0\ \alpha\ p_1\ \beta|$ | $|p_{-1}\ \alpha\ p_1\ \beta| \\|p_0\ \alpha\ p_0\ \beta|$ |
 
 
-> Example 8.3
+
+> #### Example 8.3
+>
+> 
 
 ## 8.9 The Allowed Values of J are L+S, L+S-1, …, |L-S|
 
@@ -784,6 +826,16 @@ $$
 $$
 J = L + S , L + S - 1 , L + S - 2 , \ldots , | L - S |
 $$
+
+If spin-orbit coupling is present, the terms will further split into levels.
+
+3F3 7重简并
+
+加上J后 p2 3P分裂成3个 210 1D j=2 1S 0 有5个能级
+
+
+
+钠原子 3s1谱项 自旋多重度2 L=0 S2 J=1/2  doubletP J=1/2 3/2
 
 ## 8.10 Hund’s Rules Are Used to Determine the Term Symbol of the Ground Electronic State
 
@@ -891,12 +943,12 @@ $$
 $$
 
 $$
-[ a a | b b ] = \int d \overline { x } _ { 1 } d \overline { x } _ { 2 } \chi _ { a } ^ { * } ( 1 ) \chi _ { a } ( 1 ) r _ { 12 } ^ { - 1 } \chi _ { b } ^ { * } ( 2 ) \chi _ { b } ( 2 )
+[ a a | b b ] = \int d \vec { x } _ { 1 } d \vec { x } _ { 2 } \chi _ { a } ^ { * } ( 1 ) \chi _ { a } ( 1 ) r _ { 12 } ^ { - 1 } \chi _ { b } ^ { * } ( 2 ) \chi _ { b } ( 2 )
 $$
 
 E看成一组轨道的泛函 泛函的极值问题，约束条件为$\int d \overline { x } _ { 1 } \chi _ { a } ^ { * } ( 1 ) \chi _ { b } ( 1 ) = [ a | b ] = \delta _ { a b }$
 
-定义自旋轨道的泛函$L [ \{ \chi _ { a } \} ]$
+构建新的关于自旋轨道的泛函$L [ \{ \chi _ { a } \} ]$，将有约束条件的变分问题转化为没有约束的
 $$
 L [ \{ \chi _ { a } \} ] = E _ { 0 } [ \{ \chi _ { a } \} ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } \varepsilon _ { ba } ( [ a | b ] - \delta _ { a b } )
 $$
@@ -914,9 +966,9 @@ $$
 
 $\varepsilon _ { ba } =\varepsilon _ { a b } ^ { * }$ 酉矩阵 积分指标的交换
 
-令$\chi _ { a } \rightarrow \chi _ { a } + \delta \chi _ { a }$
+令$\chi _ { a } \rightarrow \chi _ { a } + \delta \chi _ { a }$，计算一阶变分
 $$
-\delta [ a | b ] = \delta \int d \overline { x } _ { 1 } \chi _ { a } ^ { * } ( 1 ) \chi _ { b } ( 1 ) = [ \delta \chi _ { a } | \chi _ { b } ] + [ \chi _ { a } | \delta \chi _ { b } ]
+\delta [ a | b ] = \delta \int d \vec { x } _ { 1 } \chi _ { a } ^ { * } ( 1 ) \chi _ { b } ( 1 ) = [ \delta \chi _ { a } | \chi _ { b } ] + [ \chi _ { a } | \delta \chi _ { b } ]
 $$
 
 $$
@@ -927,10 +979,12 @@ $$
 \end{aligned}
 $$
 
+运用交换ab的关系 第二行第一项第三项相等
 $$
 \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \chi _ { a } \chi _ { a } | \delta \chi _ { b } \chi _ { b } ] = \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { b } \chi _ { b } | \chi _ { a } \chi _ { a } ] = \frac { 1 } { 2 } \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ]
 $$
 
+复共轭关系
 $$
 [ \chi _ { a } \delta \chi _ { a } | \chi _ { b } \chi _ { b } ] = [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ] ^ { * }
 $$
@@ -940,27 +994,132 @@ $$
 = \left \{ \sum _ { a } \sum _ { b } [ \delta \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } ] \right \} ^ {*}
 $$
 
+C.C. = complex conjugate
 $$
-\delta E _ { 0 } = \sum _ { a = 1 } ^ { N } [ \delta \chi _ { a } | h | \chi _ { a } ] + \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } ] + C . C
+\delta E _ { 0 } = \sum _ { a = 1 } ^ { N } [ \delta \chi _ { a } | h | \chi _ { a } ] + \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { a } | \chi _ { b } \chi _ { b } ] - \sum _ { a = 1 } ^ { N } \sum _ { b = 1 } ^ { N } [ \delta \chi _ { a } \chi _ { b } | \chi _ { b } \chi _ { a } ] + \rm{C.C.}
 $$
 
+约束条件项 交换第二项的标记
 $$
 \begin{aligned}
 \sum_{a b} \varepsilon_{b a} \delta[a | b] &=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\sum_{a b} \varepsilon_{b a}\left[\chi_{a} | \delta \chi_{b}\right] \\
 &=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\sum_{a b} \varepsilon_{a b}\left[\chi_{b} | \delta \chi_{a}\right] \\
 &=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\sum_{a b} \varepsilon_{b a}^{*}\left[\delta \chi_{a} | \chi_{b}\right]^{*} \\
-&=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+C . C
+&=\sum_{a b} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\rm{C.C.}
 \end{aligned}
 $$
+
+得到
+$$
+\begin{aligned}
+\delta_{L}=&\delta_{E_{0}}-\sum_{a=1}^{N} \sum_{b=1}^{N} \varepsilon_{b a} \delta[a | b] \\
+=&\sum_{a=1}^{N}\left[\delta \chi_{a}|h| \chi_{a}\right]+\sum_{a=1}^{N} \sum_{b=1}^{N}\left(\left[\delta \chi_{a} \chi_{a} | \chi_{b} \chi_{b}\right]-\left[\delta \chi_{a} \chi_{b} | \chi_{b} \chi_{a}\right]\right) \\ 
+&-\sum_{a=1}^{N} \sum_{b=1}^{N} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+\rm{C.C.} =0
+\end{aligned}
+$$
+
+双电子积分变为有效单电子
+
+引入库伦算符$J_b(1)$
+
+电子在chib2运动会有库仑相互作用
+
+交换算符$K_b(1)$
+
+
+
+用库伦算符和交换算符重写
+$$
+\delta _ { L } = \sum _ { a = 1 } ^ { N } \int d \vec { x } _ { 1 } \delta \chi _ { a } ^ { * } ( 1 ) \left[ h ( 1 ) \chi _ { a } ( 1 ) + \sum _ { b = 1 } ^ { N } ( J _ { b } ( 1 ) - K _ { b } ( 1 ) ) \chi _ { a } ( 1 ) - \sum _ { b = 1 } ^ { N } \varepsilon _ { b a } \chi _ { b } ( 1 ) \right]+\rm{C.C.}=0
+$$
+任意的$\delta \chi _ { a } ^ { * } ( 1 )$
+
+引入Fock算符$f$
+$$
+f ( 1 ) = h ( 1 ) + \sum _ { b } ( J _ { b } ( 1 ) - K _ { b } ( 1 ) )
+$$
+变化为
+$$
+f ( 1 ) \chi _ { a } ( 1 ) = \sum _ { b = 1 } ^ { N } \varepsilon _ { b a } \chi _ { b } ( 1 ) \quad \text { or } \quad f | \chi _ { a } \rangle = \sum _ { b = 1 } ^ { N } \varepsilon _ { b a } | \chi _ { b } \rangle
+$$
+
+#### 3 The canonical HF equation 正则
+
+##### 1
 
 $$
 \begin{aligned}
-\delta_{L}&=\delta_{E_{0}}-\sum_{a=1}^{N} \sum_{b=1}^{N} \varepsilon_{b a} \delta[a | b] \\
-&=\sum_{a=1}^{N}\left[\delta \chi_{a}|h| \chi_{a}\right]+\sum_{a=1}^{N} \sum_{b=1}^{N}\left(\left[\delta \chi_{a} \chi_{a} | \chi_{b} \chi_{b}\right]-\left[\delta \chi_{a} \chi_{b} | \chi_{b} \chi_{a}\right]\right)
--\sum_{a=1}^{N} \sum_{b=1}^{N} \varepsilon_{b a}\left[\delta \chi_{a} | \chi_{b}\right]+C . C . \\ 
-&=0
+\left\langle\chi_{a}^{\prime} | \chi_{c}^{\prime}\right\rangle &=\left\langle\sum_{b} \chi_{b} U_{b a} | \sum_{d} \chi_{d} U_{d c}\right\rangle \\
+&=\sum_{b} \sum U_{b q}^{*} U_{d c} \underbrace{\left\langle\chi_{b} | \chi_{d}\right\rangle}_{=\delta_{M}} \\
+&=\sum_{b} U_{b a}^{*} U_{b c}=\sum_{b}\left(U^{+}\right)_{a b} U_{b c}\\
+&=\left(U^{+} U\right)_{a c}=\delta_{a c} \\
+\left\langle\chi_{a}| \chi_{c}\right\rangle&=\delta_{ac}
 \end{aligned}
 $$
 
-#### 3 The canonical HF equation
 
+$$
+\begin{aligned}
+{A}^{\prime}=\begin{pmatrix}
+TODO
+\end{pmatrix}
+\end{aligned}
+$$
+
+$$
+\det({A}^{\prime})=\det(AU)=\det(A)\det(U)
+$$
+
+$U^+U=I$
+$$
+\det(U^+U)=\det(U^+)\det(U)
+$$
+
+##### 2
+
+$$
+f ( 1 ) = h ( 1 ) + \sum _ { b } ( J _ { b } ( 1 ) - K _ { b } ( 1 ) )
+$$
+
+跟轨道没关系，不需讨论
+$$
+\begin{aligned}
+\sum_{a} J_{a}^{\prime}(1) &=\sum_{a} \int d \vec{x}_{2} \chi_{a}^{* *}(2) r_{12}^{-1} \chi_{a}^{\prime}(2) \\
+&=\sum_{a} \int d \vec{x}_{2}\left(\sum_{b} \chi_{b}^{*}(2) U_{b a}^{*}\right) r_{12}^{-1}\left(\sum_{c} \chi_{c}(2) U_{c a}\right) \\
+&=\sum_{b c}\left[\sum_{a} U_{b a}^{*} U_{c a}\right] \int d \vec{x}_{2} \chi_{b}^{*}(2) r_{12}^{-1} \chi_{c}(2)\\
+&=\sum_{b c}\left[\delta_{b c}\right] \int d \vec{x}_{2} \chi_{b}^{*}(2) r_{12}^{-1} \chi_{c}(2) \\
+&=\sum_{b} \int d \vec{x}_{2} \chi_{b}^{*}(2) r_{12}^{-1} \chi_{b}(2)=\sum_{b} J_{b}(1)
+\end{aligned}
+$$
+提取求和指标
+
+用这个关系
+$$
+\sum _ { a } U _ { b a } ^ { * } U _ { c a } = \sum _ { a } ( U ^ { + } ) _ { a b } U _ { c a } = \sum _ { a } U _ { c a } ( U ^ { + } ) _ { a b } = ( U U ^ { + } ) _ { c b } = \delta _ { cb }
+$$
+做U变换后fock算符不变
+
+##### 3
+
+$$
+
+$$
+
+
+$$
+\begin{aligned}
+\varepsilon_{b a}^{\prime}&= \int d \vec{x}_{1}\left[\chi_{b}^{\prime}(1)\right]^{*} f(1) \chi_{a}^{\prime}(1) \\
+&=\sum_{c d} U_{d b}^{*} U_{c a} \int d \vec{x}_{1} \chi_{d}^{*}(1) f(1) \chi_{c}(1) \\
+&=\sum_{c d} U_{d b}^{*} \varepsilon_{d c} U_{c a}\\
+&=\sum_{c d}\left(U^{+}\right)_{b d} \varepsilon_{d c} U_{c a} \\
+&=\left(U^{+} \varepsilon U\right)_{b a}
+\end{aligned}
+$$
+
+$$
+f\left| \chi_{a}\right\rangle=\varepsilon_{a} \left| \chi_{a}\right\rangle
+$$
+
+This set of spin orbitals is called the set of canonical (正则）spin orbitals, which are generally be delocalized over an atom (or a molecule)
+
+否则没有轨道能量的概念
