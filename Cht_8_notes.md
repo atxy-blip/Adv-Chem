@@ -29,7 +29,7 @@
 
 氢原子
 
-氦原子
+氦原子有两个核外电子，其哈密顿可以表示为
 $$
 \hat { H } = - \frac { \hbar ^ { 2 } } { 2 m _ { e } } \nabla _ { 1 } ^ { 2 } - \frac { \hbar ^ { 2 } } { 2 m _ { e } } \nabla _ { 2 } ^ { 2 } - \frac { 2 e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \frac { 1 } { \vec{r} _ { 1 } } - \frac { 2 e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \frac { 1 } { \vec{r} _ { 2 } } + \frac { e ^ { 2 } } { 4 \pi \varepsilon _ { 0 } } \cdot \frac { 1 } { r _ { 12 } }
 $$
@@ -39,7 +39,15 @@ $$
 \hat { H } = - \frac { 1 } { 2 } \nabla _ { 1 } ^ { 2 } - \frac { 1 } { 2 } \nabla _ { 2 } ^ { 2 } - \frac { 2 } { \vec{r} _ { 1 } } - \frac { 2 } { \vec{r} _ { 2 } } +  \frac { 1 } { r _ { 12 } }
 $$
 
-锂原子
+$$
+E=\iint=I_1+I_2+J_{12}
+$$
+
+
+
+
+
+原子
 
 核
 $$
@@ -109,19 +117,23 @@ $$
 
 
 
-### The Eigenvalues of $\hat { S } ^ { 2 }$ And $\hat { S } _ { z }$ (in Atomic Units) 原子单位制的本征值
+### The Eigenvalues of $\hat { S } ^ { 2 }$ And $\hat { S } _ { z }$ (in Atomic Units) 原子单位制的自旋本征值
 
 $$
 \hat { S } ^ { 2 } Y = s \left ( s + 1 \right ) Y \quad s = 0 , \frac { 1 } { 2 } , 1, \frac { 3 } { 2 } , \cdots \\
 \hat { S } _ { z } Y = m _ { s } Y \quad m _ { s } = - s , - s + 1 , \cdots , s - 1 , s
 $$
 
-s称为粒子的自旋
+其中s称为粒子的自旋。所有的电子都有1/2的自旋
 
 两电子耦合 矢量长度固定，总自旋S取值0或1
+
+电子自旋的本征函数为$\alpha, \beta$，分别对应$\frac { 1 } { 2 } , - \frac { 1 } { 2 }$的本征值。
 $$
-\hat { S } _ { + } = \hat { S } _ { x } + i \hat { S } _ { y } \quad \hat { S } _ { - } = \hat { S } _ { x } - i \hat { S } _ { y }
+\hat { S } _ { z } \alpha = \frac { 1 } { 2 } \alpha \quad \hat { S } _ { z } \beta = - \frac { 1 } { 2 } \beta \\
+\hat { S } ^ { 2 } \alpha = \frac { 3 } { 4 } \alpha \quad \hat { S } ^ { 2 } \beta = \frac { 3 } { 4 } \beta
 $$
+
 
 $$
 \alpha: \left| \frac { 1 } { 2 } , \frac { 1 } { 2 } \right \rangle \quad
@@ -129,15 +141,27 @@ $$
 $$
 
 第一个是s，第二个是ms Sz本征值
+
+任何电子的自旋函数都可以表示为$C_1\alpha+C_2\beta$
+
+The spin-up function: $\alpha(\sigma)$
+
+The spin-down function: $\beta(\sigma)$
+
+$\sigma$称为自旋变量
+
+正交归一条件：
 $$
 \int \alpha ^ { * } \left ( \sigma \right ) \alpha \left ( \sigma \right ) d \sigma = \int \beta ^ { * } \left ( \sigma \right ) \beta \left ( \sigma \right ) d \sigma = 1 \\
 \int \alpha ^ { * } \left ( \sigma \right ) \beta \left ( \sigma \right ) d \sigma = \int \beta ^ { * } \left ( \sigma \right ) \alpha \left ( \sigma \right ) d \sigma = 0
 $$
 
-
-
 ### Ladder Operators for Electron Spin 电子自旋的梯形算符
 
+自旋角动量的上升和下降算符为：
+$$
+\hat { S } _ { + } = \hat { S } _ { x } + i \hat { S } _ { y } \quad \hat { S } _ { - } = \hat { S } _ { x } - i \hat { S } _ { y }
+$$
 
 在原子单位中使用如下关系
 $$
@@ -453,7 +477,7 @@ MIT Slater
 $$
 \begin{aligned}
 \Psi \left ( 1,2 \right ) &= \begin{vmatrix} { 1 s \alpha \left ( 1 \right ) } & { 1 s \beta \left ( 1 \right ) } \\ { 1 s \alpha \left ( 2 \right ) } & { 1 s \beta \left ( 2 \right ) }\end{vmatrix} \\
-&= 1 s \left ( 1 \right ) \alpha \left ( 1 \right ) ! s \left ( 2 \right ) \beta \left ( 2 \right ) - 1 s \left ( 1 \right ) \beta \left ( 1 \right ) 1 s \left ( 2 \right ) \alpha \left ( 2 \right ) \\ 
+&= 1 s \left ( 1 \right ) \alpha \left ( 1 \right ) s \left ( 2 \right ) \beta \left ( 2 \right ) - 1 s \left ( 1 \right ) \beta \left ( 1 \right ) 1 s \left ( 2 \right ) \alpha \left ( 2 \right ) \\ 
 &= 1 s \left ( 1 \right ) 1 s \left ( 2 \right ) \left [ \alpha \left ( 1 \right ) \beta \left ( 2 \right ) - \beta \left ( 1 \right ) \alpha \left ( 2 \right ) \right ]
 \end{aligned}
 $$
@@ -872,6 +896,7 @@ $$
 \left. { \hat { L } \cdot \hat { S } = \frac { 1 } { 2 } ( \hat { J } ^ { 2 } - \hat { L } ^ { 2 } - \hat { S } ^ { 2 } ) } \\ { \hat { L } \cdot \hat { S } \Psi = \frac { 1 } { 2 } [ J ( J + 1 ) - L ( L + 1 ) - S ( S + 1 ) ] \Psi } \right.
 $$
 
+确定量
 $$
 E _ { n } ^ { ( 1 ) } = \int \psi _ { n } ^ { ( 0 ) * } \hat { H } _ { S O } ^ { ( 1 ) } \psi _ { n } ^ { ( 0 ) } d \tau
 $$
@@ -898,11 +923,13 @@ $$
 
 ### The spin-orbital effect is important in heavier atoms
 
-## Supplementary Material 补充材料
+旋轨耦合作用强的时候微扰法失效 荧光和磷光
 
-### The Derivation of the Hartree-Fock Equation
+# Supplementary Material 补充材料
 
-#### 1 Functional variation
+## The Derivation of the Hartree-Fock Equation
+
+### 1 Functional variation
 
 试探波函数
 $$
@@ -929,7 +956,7 @@ $$
 
 stationary point
 
-#### 2 Minimization of the energy of a single determinant
+### 2 Minimization of the energy of a single determinant
 
 单一轨道$| \psi _ { 0 } \rangle = | \chi _ { 1 } \chi _ { 2 } \cdots \chi _ { N } \rangle$
 
@@ -1043,9 +1070,9 @@ $$
 f ( 1 ) \chi _ { a } ( 1 ) = \sum _ { b = 1 } ^ { N } \varepsilon _ { b a } \chi _ { b } ( 1 ) \quad \text { or } \quad f | \chi _ { a } \rangle = \sum _ { b = 1 } ^ { N } \varepsilon _ { b a } | \chi _ { b } \rangle
 $$
 
-#### 3 The canonical HF equation 正则
+### 3 The canonical HF equation 正则
 
-##### 1
+#### 1
 
 $$
 \begin{aligned}
@@ -1075,7 +1102,7 @@ $$
 \det(U^+U)=\det(U^+)\det(U)
 $$
 
-##### 2
+#### 2
 
 $$
 f ( 1 ) = h ( 1 ) + \sum _ { b } ( J _ { b } ( 1 ) - K _ { b } ( 1 ) )
@@ -1099,7 +1126,7 @@ $$
 $$
 做U变换后fock算符不变
 
-##### 3
+#### 3
 
 $$
 
