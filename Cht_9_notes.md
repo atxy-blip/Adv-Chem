@@ -110,6 +110,8 @@ $$
 
 ## 9.3 A Simple Molecular-Orbital Treatment of H~2~ Places Both Electrons in a Bonding Orbital
 
+我们得到了成键轨道和反键轨道
+
 多原子分子，把他的分子轨道用原子轨道的线性组合表示
 
 求解HFR方程，根据对称性粗糙得到）多电子原子的波函数用slate行列式描述
@@ -118,7 +120,7 @@ $$
 
 氢分子取两个独立的氢原子轨道 zeta=1 不完全独立
 $$
-1 s = ( \zeta ^ { 3 } / \pi ) ^ { 1 / 2 } e ^ { - \zeta } \quad ( \zeta = 1
+1 s = ( \zeta ^ { 3 } / \pi ) ^ { 1 / 2 } e ^ { - \zeta } \quad ( \zeta = 1
 $$
 
 
@@ -134,13 +136,17 @@ sigma轨道关于原子核连线的轴对称
 
 1sA轨道经过反演得到1sB 相加得到 相减得到负号
 
-
+2pzA变成2pzB
 
 2p对称面
 
-反演操作2pxA变成-2pxA
+反演操作2pxA变成-2pxB
+
+2pxA+2pxB变成-2pxA-2pxB
 
 The Overlap Integral Is a Quantitative Measure of the Overlap of Atomic Orbitals Situated on Different Atoms
+
+2个3d轨道组合 dz2dz2头对头sigma 肩并肩pi 面对面 delta
 
 ## 9.4 Molecular Orbitals Can Be Ordered According to Their Energies                                                             分子轨道可以根据能量排序
 
@@ -150,29 +156,73 @@ The Overlap Integral Is a Quantitative Measure of the Overlap of Atomic Orbitals
 
 ## 9.5 Molecular-Orbital Theory Can Account for the Stability of Homonuclear Diatomic Molecules                                                                                        分子轨道理论可以解释同核双原子分子的稳定性
 
+键级=1/2成键轨道电子数-反键轨道电子数
 
+下标同核对称性 g对称 u是不对称
+
+B2自旋多重度是3 键级为1
+$$
+K K ( \sigma _ { g } 2 s ) ^ { 2 } ( \sigma _ { u } 2 s ) ^ { 2 } ( \pi _ { u } 2 p _ { x } ) ^ { 1 } ( \pi _ { u } 2 p _ { y } ) ^ { 1 }
+$$
+
+
+> #### Example 9.2
+>
+> 氧分子S=1三重态基态 顺磁性paramagnetic
+
+键级大键长短
 
 ## 9.6 Photoelectron Spectra Support the Existence of Molecular Orbitals                                                                                                                                            光电谱是分子轨道存在的证据
 
+光电子能谱的峰 电离能是分子轨道能量的负值
 
+## 9.7 Molecular-Orbital Theory Also Applies to Heteronuclear Diatomic Molecules                                                                                                                                       使用分子轨道理论预测异核双原子分子的成键
 
-## 9.7 Molecular-Orbital Theory Also Applies to Heteronuclear Diatomic Molecules                                                                                                                                       分子轨道理论也适用于异核双原子分子
+考虑氰根粒子 碳氮电负性接近 用C2组态类比 写出电子组态
+
+反演对称性不成立，反键用*表示
+$$
+K K ( \sigma 2 s ) ^ { 2 } ( \sigma ^ { * } 2 s ) ^ { 2 } ( \pi 2 p _ { x } ) ^ { 2 } ( \pi 2 p _ { y } ) ^ { 2 } ( \sigma 2 p _ { z } ) ^ { 2 }
+$$
+HF分子中用2pz成键 2px不能有效重叠 1sH不与1s轨道重叠：成键有三要素 能量不匹配 F的1s轨道能量低
+$$
+\psi = c_1 1 S_H \pm c_2 2 p_{zF}
+$$
+F 非键轨道，不参与键级计算
 
 
 
 ## 9.8 An SCF-LCAO-MO Wave Function Is Determined Self-Consistently
 
+采用许多原子轨道的线性组合得到更好的分子轨道
+$$
+\psi = c _ { 1 } 1 s _ { A } + c _ { 2 } 1 s _ { B } + c _ { 3 } 2 s _ { A } + c _ { 4 } 2 s _ { B } + c _ { 5 } 2 p _ { z A } + c _ { 6 } 2 p _ { z B } + \cdots
+$$
+HF方法可以预测键长但不能很好地预测键能
+
+## 9.9 Electronic States of Molecules Are Designated by Molecular Term Symbols
+
+$$
+M_L=m_{l1}+m_{l2}+\cdots
+$$
+
+找到与哈密顿对易的量来表示状态
+
+## 9.10 Molecular Term Symbols Designate the Symmetry Properties of Molecular Wave Functions
+
+$$
+\left|\psi_{1} \alpha \psi_{2} \beta\right|=\left\{\begin{array}{l}
+g(g \times g, u \times u) \\
+u(g \times u, u \times g)
+\end{array}\right\}
+
+$$
+
+## 
 
 
-## 9.11 Electronic States of Molecules Are Designated by Molecular Term Symbols
 
-
-
-## 9.15 Molecular Term Symbols Designate the Symmetry Properties of Molecular Wave Functions
-
-
-
-## 9.16 Most Molecules Have Excited Electronic States
+## 9.11 Most Molecules Have Excited Electronic States
 
 
 
@@ -180,3 +230,7 @@ The Overlap Integral Is a Quantitative Measure of the Overlap of Atomic Orbitals
 
 ## Introduction to Valence Bond Theory 价键理论简介
 
+
+$$
+\Theta_k= \prod _ { i , j } \frac { 1 } { \sqrt { 2 } } [ \alpha ( i ) \beta ( j ) - \alpha ( j ) \beta ( i ) ] \prod _ { i } \alpha ( k )
+$$
